@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>history 객체</title>
+</head>
+<body>
+	<h3>history 객체</h3>
+	<p>브라우저에서 방문했던 주소 기록을 보관하는 객체이다.(배열 형태로 저장되어 있다.)</p>
+	<p>보안문제로 읽기 전용이며 이전 페이지와 다음 페이지로 이동시키는 기능을 할 수 있는 객체이다.</p>
+	
+	<hr>
+	
+	<script>
+		function fun1(){
+			// 방문한 총 페이지수 : length 프로퍼티
+			window.alert(history.length);
+		}
+		function fun2(){
+			window.alert("한칸 이전 페이지로 이동");
+			//history.back();
+			
+			// go() 메서드 : 양수(다음), 음수(이전)으로 이동시킨다.
+			history.go(-1);
+		}
+		function fun3(){
+			window.alert("한칸 다음 페이지로 이동");
+			//history.forward
+			
+			// go() 메서드 : 양수(다음), 음수(이전)으로 이동시킨다.
+			history.go(1);
+		}
+	</script>
+	
+	<input type="button" value="방문기록개수" onclick="fun1();">
+	<input type="button" value="한칸 이전 페이지로 이동" onclick="fun2();">
+	<input type="button" value="한칸 이후 페이지로 이동" onclick="fun3();">
+	
+</body>
+</html>

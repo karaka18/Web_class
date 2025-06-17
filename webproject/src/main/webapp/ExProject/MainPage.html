@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페 예약 서비스</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header, section, main, aside {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+        }
+        nav button {
+            margin: 0 10px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        section div, main div, aside div {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin: 5px 0;
+            padding: 5px;
+            background-color: #d3d3d3;
+            border-radius: 3px;
+        }
+        #main2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            gap: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        #main2 div {
+            flex: 1;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div>사이트 명</div>
+        <div>검색 창<input type="text"></div>
+        <nav>
+            <button>예약관리</button>
+            <button>주문 내역</button>
+            <button>로그인/회원가입</button>
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <button>기본 창 옵션 버튼</button>
+            <span>현재 메인 기준</span>
+        </div>
+        <div>
+            <button>전국 지역 내 주변 버튼 (토글)</button>
+        </div>
+    </section>
+
+    <main id="main2">
+        <div>
+            <h2>실시간 인기 카페</h2>
+            <div>카페 슬라이드</div>
+        </div>
+        <div>
+            <h2>가까운 카페</h2>
+            <div>카페 슬라이드</div>
+        </div>
+        <div>
+            <h2>이벤트, 할인 등</h2>
+            <div>이벤트 정보</div>
+        </div>
+    </main>
+
+    <aside>
+        <div>
+            <h3>내 주문 현황 및 상호작용 요소</h3>
+            <ul>
+                <li>예약한 매장 명</li>
+                <li>대기 인원(대기시간)</li>
+                <li>예약자 정보</li>
+                <li>예약 메뉴, 금액, 주문 취소</li>
+            </ul>
+        </div>
+        <div>
+            <button>지도로 주문</button>
+        </div>
+    </aside>
+</body>
+</html>

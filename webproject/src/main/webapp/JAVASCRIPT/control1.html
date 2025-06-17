@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제어문(반복문)</title>
+
+<style>
+	#b {
+		display:inline-block;
+		background-color: #eee;
+		margin:15px;
+		border:1px solid #ccc;
+		border-radius: 10px; 
+		padding:10px;
+		font-weight:bold;
+		text-align:justify;
+		box-shadow: 2px 2px gray;
+	}
+	
+	h3 {
+		text-align:center;
+		font-weight:900;
+		color:navy;
+	}
+	
+</style>
+
+</head>
+<body>
+	<h3> 구구단 출력(2단 ~ 9단까지 출력)</h3>
+	
+	<script>
+		// 중첩 for문 : 바깥쪽 for문이 1번 수행될동안 안쪽 for문은 지정된 반복횟수만큼 모두 수행을 해야하는 경우에만 사용한다.
+		// 2 * 1 = 2, 2 * 2 = 4.....
+		
+		let i, j;
+	
+		for(i=2;i<=9;i++){	// 바깥쪽 for문(2 ~ 9단)
+			
+			document.write(`<div id="b">`);
+			document.write(` <h3> ${i} 단 </h3>`);
+		
+			for(j=1;j<=9;j++){	// 안쪽 for문(곱하는 수:1 ~ 9)
+				// document.write(`<div id="b">${i} * ${j} = ${i*j}<br></div>`);
+				document.write(`${i} * ${j} = ${i*j}<br>`);
+			}
+			document.write(`</div>`);
+		}
+		
+	
+	
+	</script>
+</body>
+</html>

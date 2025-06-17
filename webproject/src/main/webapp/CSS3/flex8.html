@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#container {
+		width : 1000px;
+		display:flex;
+		border:1px solid black;
+		background-color: #eee;
+		gap:30px;
+	}
+	
+	/* 배경색 지정 */
+	.box:nth-child(odd) {
+		background-color: orange;
+	}
+	
+	.box:nth-child(even) {
+		background-color: green;
+	}
+	
+	/* 각 항목내의 문자 지정 */
+	#container div {
+		color:#fff;
+		text-align: center;
+		font-size: 2rem;
+	}
+	
+	/* 3.flex-shrink 속성(축소) : 부모 컨테이너의 너비가 줄어드는 경우 
+	flex 항목의 너비를 비율에 맞게 줄이도록 지정 */
+	/* 기본값 : 1 (컨테이너 크기에 맞추어서 항목을 축소) */
+	/* 모자라는 공간을 1:기본값:1:2 비율로 나누어서 항목 너비를 축소 */
+	.box {
+		/* flex-basis : 플렉스 항목의 기본크기를 지정하는 속성 */
+		flex-basis:300px;
+	}
+	
+	.box1{
+		flex-shrink: 1;        
+    	/* 항목 순서 바꿈 지정 */
+    	order: 4;
+    }
+	.box2{ 
+		/* 축소하지 않음 : flex-basis로 지정한 값 그대로 사용 */
+		flex-shrink: 0; order: 1; 
+	}
+	.box3 { flex-shrink: 1; order:3; }
+	.box4 { flex-shrink: 2; order:2; }
+	
+	
+	
+</style>
+</head>
+<body>
+	<h3>자식(항목: item)에 지정하는 flex 속성</h3>
+	<div id="container">
+		<div class="box box1">첫번째</div>
+		<div class="box box2">두번째 항목</div>
+		<div class="box box3">세번째</div>
+		<div class="box box4">네번째</div>
+		
+	</div>
+</body>
+</html>

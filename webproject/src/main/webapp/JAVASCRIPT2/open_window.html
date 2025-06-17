@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>팝업창(공지창)</title>
+</head>
+<body>
+	<h3>공지사항</h3>
+	
+	<ul>
+		<li>항목1</li>
+		<li>항목2</li>
+		<li>항목3</li>
+		<li>항목4</li>
+		<li>항목5</li>
+	</ul>
+	
+	<input type="button" value="닫기" onclick="cls()">
+	<!--<input type="button" value="닫기" onclick="window.close();">-->
+	<!--javascript 지정되어 있을 경우 -> 자바스크립트 코드로만 해석되어 수행-->
+	<!--<input type="button" value="닫기" onclick="javascript:window.close();">-->
+	
+	<script>
+		function cls(){
+			alert("창을 닫습니다.!!!");
+			//현재창을 닫는 메서드
+			window.close();
+		}
+	</script>
+</body>
+</html>

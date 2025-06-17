@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 객체(Event Obejct)</title>
+</head>
+<body>
+	<h3>이벤트 객체를 이용한 자바스크립트 기능 완성하기</h3>
+	<p>1.키보드의 아무키나 눌러보세요....</p>
+	<div id = "result"></div>
+	
+	<script>
+		
+		const body = document.body;
+		const result = document.querySelector("#result");
+		
+		body.addEventListener('keydown', function(e){
+			result.innerText = `code : ${e.code}, ${e.key}`;
+		});
+		
+	</script>
+	<hr>
+	<p>2.contextmenu 이벤트를 사용하여 오른쪽 (바로가기) 메뉴 사용하지 못하도록</p>
+	
+	<script>
+		/*
+		window.addEventListener('contextmenu', function(e){
+			e.preventDefault();	//contextmenu 이벤트가 가지고 있는 이벤트를 취소할때 사용하는 메서드
+			alert('오른쪽(바로가기) 메뉴를 사용할 수 없습니다.!!!');
+		});
+		*/
+	</script>
+	<hr>
+	
+	<p>3.copy 이벤트를 사용하여 복사하지 못하도록</p>
+	
+	<script>
+		window.addEventListener('copy', (e) => {
+			alert("보안정책에 의해 복사를 허용하지 않습니다.");
+			//e.preventDefault();
+			
+			// 클립보드(컴퓨터 내부에 복사한 내용을 임시로 저장하는 공간)에 저장된 컨텐츠를 삭제
+			e.clipboardData.clearData("Text"); 	
+		});
+		
+	</script>
+	
+	
+	
+	
+	
+</body>
+</html>

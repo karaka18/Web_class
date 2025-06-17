@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window객체(메인창)</title>
+</head>
+<body>
+	<h1>여기는 main 창</h1>
+	
+	<input type="button" value="창열기" onclick="win()">
+	
+	<script>
+		function win(){
+			// 형식)window.open("표시할파일명(경로)", "창이름", "창옵션(창의 구성요소) 콤마로 구분해서 여러개 지정 가능");
+			// 창이름을 지정하지 않으면 공지사항 창이 여러개 띄워져 있을 수 있다.
+			window.open("open_window.html", "pop", "width=500, height=500, left=100, top=100");
+		}
+	</script>
+	
+	
+	chrome://version
+</body>
+</html>

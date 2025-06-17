@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사진 갤러리 만들기</title>
+<style>
+
+body {
+	width:100vw;
+	height: 100vh;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gallery {
+	width:700px;
+	margin:20px auto;
+	display:grid;
+	
+	grid-template-areas: 
+          "photo1 photo1 photo2"
+          "photo1 photo1 photo3"
+          "photo4 photo5 photo6";
+    grid-gap:5px;   	
+}
+
+.gallery img {
+	width:100%; height:100%;
+	object-fit:cover; 
+	border-radius:10px;
+
+}
+
+
+.photo1 { grid-area:photo1;}
+.photo2 { grid-area:photo2; }
+.photo3 { grid-area:photo3; }
+.photo4 { grid-area:photo4; }
+.photo5 { grid-area:photo5; }
+.photo6 { grid-area:photo6; }
+
+
+
+
+</style>
+</head>
+<body>
+
+ <div class="gallery">
+      <img class="photo1" src="image5/photo-1.jpg" alt="따뜻한 차가 있는 겨울 풍경">
+      <img class="photo2" src="image5/photo-2.jpg" alt="남극 펭귄">
+      <img class="photo3" src="image5/photo-3.jpg" alt="눈이 가득 쌓인 시골 풍경">
+      <img class="photo4" src="image5/photo-4.jpg" alt="오로라가 보이는 밤 풍경">
+      <img class="photo5" src="image5/photo-5.jpg" alt="눈 쌓인 배경">
+      <img class="photo6" src="image5/photo-6.jpg" alt="나뭇가지에 앉아있는 빨간 새">
+</div>
+
+
+</body>
+</html>

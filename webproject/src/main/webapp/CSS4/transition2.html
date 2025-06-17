@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.prod{
+		width:250px; height:166px;
+		border:1px soliddd black;
+/*		padding:0; */
+
+		position:relative;
+	}
+
+	.prod img{
+		margin:0; padding:0;
+	}
+	
+	.prod .caption{
+		position:absolute;
+		top:-200px; /* 기준위치 */
+		width:250px; height:166px;
+		/* 요소에 투명도 지정 : 화면에 보이지 않게 (0~1사이의 값) 지정 */
+		/* 0:완전투명, 1:완전불투명 */
+		opacity:0;	/* 상품 설명 내용이 보이지 않도록 */
+	}
+	
+	.prod:hover .caption{
+		background-color: rgba(0,0,0,0.6);
+		color:#fff;
+		/* 설명이 화면에 보이게 지정 */
+		opacity:1;
+		
+		/* 스타일 속성 변형 */
+		transition:all 2s ease-in-out;
+		
+		transform:translateY(200px);
+	}
+	
+	.prod .caption h2, .caption p{
+		color:#fff;
+		font-size:1.2em;
+		text-align:center;
+	}
+
+</style>
+
+</head>
+<body>
+	<div class="prod">
+		<img src="image6/cup-1.jpg">
+			<div class="caption">
+				<h2>상품 1</h2>
+				<p>상품 1 설명 텍스트</p>
+				<p>가격 : 12,345원</p>
+			</div>
+	</div>
+	
+	
+	
+</body>
+</html>

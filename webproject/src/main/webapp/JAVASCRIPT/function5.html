@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 표현식</title>
+</head>
+<body>
+	<h3>화살표 함수(fat arrow => 익명함수를 작성할 때 구문을 축약)로 생성하는 방법</h3>
+	
+	<script>
+		// 1. 매개변수가 없는 경우
+		
+		const h1 = function(){
+			return "안녕하세요";
+		}
+		
+		document.write(`${h1()}`);
+		document.write(`<br>--------------------<br>`);
+		
+		// 화살표 함수(fat arrow) : 익명함수 구문 축약
+		// 1) function 키워드 대신 fat arrow : =>를 사용
+		// 2) 매개변수 괄호()는 적어준다.
+		// 3) 함수내에서 처리해야 되는 구문 {	}이 한줄만 처리해야 되면{중괄호}는 생략 가능하다.
+		// 4) 함수내에서 처리해야 되는 구문 {	}이 return인 한줄이면 {중괄호}와 return 키워드는 생략 가능하다.
+		
+		// 함수내에서 처리해야 되는 구문 {	}이 한줄만 처리해야 되면{중괄호}는 생략 가능하다.
+		const h1_1 = () => {return "안녕하세요";}
+		document.write(`${h1_1()}<br>`);
+		
+		// 함수내에서 처리해야 되는 구문 {	}이 return인 한줄이면 {중괄호}와 return 키워드는 생략 가능하다.
+		const h1_2 = () => "안녕하세요";
+		document.write(`${h1_2()}<br>`);
+		document.write(`--------------------<br>`);
+		
+		// 2.매개변수가 1개 있는 경우, 함수내에서 처리할 내용이 한 줄만 있는 경우
+							"자바스크립트"
+		const h2 = function(user){
+			document.write(`${user}님! 안녕하세요!!! <br>`);
+		}
+		h2("자바스크립트");
+		document.write(`------------------------<br>`);
+		
+		// 매개변수명을 꼭 적어주고 매개변수 괄호는 생략할 수 있다.
+		const h2_1 = (user) => {document.write(`${user}님! 안녕하세요!!! <br>`);}
+		const h2_2 = user => {document.write(`${user}님! 안녕하세요!!! <br>`);}
+		h2_1("이순신");
+		h2_2("홍길동");
+		document.write(`=====================<br>`);
+		
+		// 2.매개변수가 2개 (이상) 있는 경우, 함수내에서 처리할 내용이 한 줄만 있는 경우
+		
+		let total = function(a,b){
+			return a * b;
+		}
+		
+		document.write(`total(10, 3) = ${total(10, 3)}<br>`);
+		
+		// 매개변수명과 매개변수 괄호는 생략할 수 없다.(꼭 적어주어야 함)
+		let total_1 = (a,b) => {return a * b}
+		
+		// 함수내에서 처리해야 되는 구문 {  }이 return인 한줄이면 {중괄호} 와 return 키워드는 생략 가능하다.
+		let total_2 = (a,b) => a * b;
+		
+		document.write(`${total_1(10, 3)}<br>`);
+		document.write(`${total_2(10, 3)}<br>`);
+		
+		
+		
+	</script>
+</body>
+</html>

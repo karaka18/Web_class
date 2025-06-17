@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수(function)</title>
+</head>
+<body>
+	<h3>1.함수 : 하나의 특정기능을 수행하도록 설계된 일련의 코드이다.</h3>
+	<h3>1)함수 생성 방법:1)함수 선언문 형식에 의한 함수 생성방법</h3>
+	<h3>			 2)함수 표현식 형식에 의한 함수 생성방법</h3>
+	<h3>2)함수는 정의하고 출력하는 방식으로 사용한다.</h3>
+	<hr>
+	
+	<h3>1)함수 선언문 형식에 의한 함수 생성방법</h3>
+	
+	<script>
+//		함수 정의 형식)
+//		function 함수명(매개변수){
+//			처리할 내용;
+//			return 반환값;
+//		}
+
+//		1-) 함수 1유형 정의 : 매개변수가 없고 반환값이 없는 경우
+		
+		function ramen(){
+			let name = "신";
+			let water = 550;
+			let time = "4분 30초";
+			document.write(`${name} 라면은 ${water} ml의 물을 붓고 ${time} 동안 끓면 맛있어요!!<br>`);
+		
+		}
+		
+		// 함수 호출 형식): 함수명(매개변수값이 있으면 지정해주어야 함)
+		// 1-1) 1유형 호출
+		ramen();
+		document.write(`--------------------------<br>`);
+		
+		// 1-2 함수 2유형 정의 : 매개변수가 있고 반환값이 없는 경우
+		function ramen1(name, water, time){
+			document.write(`${name} 라면은 ${water} ml의 물을 붓고 ${time} 동안 끓이면 맛있어요!!!<br>`);
+			return;		
+		}
+		
+		// 1-2) 2유형 호출
+		// function ramen1(name, water, time)
+		ramen1("신", 550, "4분 30초");
+		ramen1("짜파게티", 350, "4분");
+		document.write(`--------------------------<br>`);
+		
+		//1-3) 함수 3유형 정의 : 매개변수가 없고 반환값이 있는 경우
+		function ramen2(){
+			let name = "신";
+			let water = 550;
+			let time = "4분 30초";
+			// document.write(`${name} 라면은 ${water} ml의 물을 붓고 ${time} 동안 끓이면 맛있어요!!!<br>`);
+			// 반환값이 있는 경우는 호출한 곳으로 반환값을 돌려주어야 한다.!!
+			return `${name} 라면은 ${water} ml의 물을 붓고 ${time} 동안 끓이면 맛있어요!!!<br>`;
+			
+		}
+		
+		// 1-3) 3유형 호출
+		// ramen2(); // 함수 호출도하고 함수내에서 돌려받은 반환값을 가지고 있다.
+		// document.write(ramen2());
+		let result = ramen2();
+		document.write(`함수내에서 돌려받은 반환값을 저장한 result 변수 출력 : ${result}`);
+		document.write(`--------------------------<br>`);
+		
+		function ramen3(){
+			let name = prompt("라면 이름 입력 >> ");
+			let water = prompt("물의 양 입력 >> ");
+			let time = prompt("조리 시간 입력 >> ");
+			// document.write(`${name} 라면은 ${water} ml의 물을 붓고 ${time} 동안 끓이면 맛있어요!!!<br>`);
+			// 반환값이 있는 경우는 호출한 곳으로 반환값을 돌려주어야 한다.!!
+			return `${name} 라면은 ${water} ml의 물을 붓고 ${time} 동안 끓이면 맛있어요!!!<br>`;
+			
+		}
+		
+		let result1 = ramen3();
+		document.write(`함수내에서 돌려받은 반환값을 저장한 result1 변수 출력 : ${result1}`);
+		document.write(`----------------------<br>`);
+		
+		function ramen4(name, water, time){
+			//호출한 곳으로 반환값을 돌려주어야 한다.!!!
+			return `${name} 라면은 ${water} ml의 물을 붓고 ${time} 동안 끓이면 맛있어요!!!<br>`;
+		}
+		
+		//1-4) 4유형 호출
+		//function ramen4(name, water, time)
+		let result2 = ramen4("꼬꼬면", 300, "3분30초"); // 함수 호출도 하고 함수내에서 돌려받은 반환값도 가지고 있다.
+		document.write(result2);
+		document.write(`----------------------<br>`);
+
+
+
+
+		
+	</script>
+	
+	
+
+</body>
+</html>

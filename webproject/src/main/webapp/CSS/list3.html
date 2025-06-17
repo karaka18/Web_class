@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표 스타일</title>
+<style>
+	table{
+		border:1px solid black;
+		
+		/* 테이블의 셀과 셀사이의 여백 지정 : 형식) border-spacing : 수평거리 수직거리 */
+		border-spacing:10px 20px;
+		
+		/* 테이블의 셀과 셀사이의 여백을 없애고 선하나로 표시 */
+		border-collapse: collapse;
+		
+		/* 표제목 위치 지정 속성 : top, bottom */
+		caption-side: bottom;
+	}
+	
+	/* caption 을 아래쪽으로 이동(caption-side)시킨후 오른쪽으로 정렬 */
+	caption{
+		text-align: right;
+	}
+	th{
+		border:1px solid black;
+		padding:10px;
+	}
+	td{
+		border:1px solid black;
+		padding:10px;
+		text-align: center;
+		font-weight:bold;
+		color:navy;
+	}
+	
+	.bg{
+		background-color: skyblue;
+	}
+	.w{
+		width:300px
+	}
+	
+	/* 고급 선택자 : 구저 가상 클래스 선택자 */
+	th:nth-child(2) {
+		background-color: orange;
+}
+
+</style>
+
+</head>
+<body>
+<table>
+	<caption>출처: 통계청 100대 지표</caption>
+	<tr>
+		<th width="150">지표</th>
+		<th width="200">2019</th>
+		<th width="200">2020</th>
+		<th width="200">2021</th>
+		<th width="300" class="bg">2022</th>
+	</tr>
+	<tr>
+		<th class="w">가구수</th>
+		<td>20,891.348</td>
+		<td>21,484,785</td>
+		<td>22,022,753</td>
+		<td class="bg">22,383,187</td>
+	</tr>
+	<tr>
+		<th>1인가구</th>
+		<td>6,147,516</td>
+		<td>6,643,354</td>
+		<td>7,165,788</td>
+		<td class="bg">7,502,350</td>
+	</tr>
+</table>	
+</body>
+</html>

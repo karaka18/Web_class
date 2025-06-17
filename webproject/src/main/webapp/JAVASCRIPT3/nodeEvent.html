@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 위임</title>
+</head>
+<body>
+	<p>이벤트 위임</p>
+	<p>1.생성된 이벤트 객체 사용</p>
+	아이디 : <input type="text" id="id">
+	
+	<script>
+		let inEvent = document.getElementById('id');
+		
+		inEvent.onclick = function(event) {
+//			alert(`event.target = ${event.target}`);-->
+//			alert(`event.target = ${event.target.value}`);-->
+			console.log(`event.target = ${event.target}`);
+			console.log(`event.target.value = ${event.target.value}`);
+			
+		}
+		
+		
+		
+		
+		
+	</script>
+	<hr>
+	
+	<p>2.이벤트 위임 : 개별 요소에 이벤트 리스너(or 이벤트 핸들러, 이벤트 처리기)를 생성</p>
+	<div id="menu">
+		<button id="btn1">버튼1</button>
+		<button id="btn2">버튼2</button>
+		<button id="btn3">버튼3</button>
+	</div>
+	
+	<script>
+		const menu = document.getElementById("menu");
+		const btn1 = document.getElementById("btn1");
+		const btn2 = document.getElementById("btn2");
+		const btn3 = document.getElementById("btn3");
+		
+		btn1.addEventListener("click", function(){
+			alert("버튼1 클릭!!!");
+		});
+		btn2.addEventListener("click", function(){
+			alert("버튼2 클릭!!!");
+		});
+		btn3.addEventListener("click", function(){
+			alert("버튼3 클릭!!!");
+		});
+		
+	</script>
+	<hr>
+	
+	<p>2-1.이벤트 위임 : 상위 요소에만 이벤트 리스너를 생성</p>
+<!--이벤트 위임은 개별 요소에 이벤트 리스너를 생성하는 대신 상위 요소에만 이벤트 리스너를 생성하고-->
+<!--해당 이벤트 리스너에서 어떤 요소에서 이벤트가 발생했는지 조건문을 설정한다.-->
+	
+	<div id="menu1">
+		<button id="btn1_1">버튼1</button>"
+		<button id="btn2_1">버튼2</button>
+		<button id="btn3_1">버튼3</button>
+	</div>
+	
+	<script>
+		//1.상위 요소인 id가 "menu1"인 div 노드만 접근
+		const menu1 = document.getElementById("menu1");
+		
+		//2.접근한 div 노드에만 이벤트 리스너를 설정
+		menu1.addEventListener('click',function(e){
+			const id = e.target.id; //div 태그의 id값을 가져와서 변수에 저장
+			
+			//이벤트 객체의 e.target.id로 조건문을 설정
+			
+			if(id === "menu"){
+				alert("div 요소의 id값 click!!!");
+			} else if(id === "btn1_1"){
+				alert("1번째 button 요소의 id값 click!!!");
+			} else if(id === "btn2_1"){
+				alert("2번째 button 요소의 id값 click!!!");
+			} else if(id === "btn3_1"){
+				alert("3번째 button 요소의 id값 click!!!");
+			}
+			
+		});
+		
+	</script>
+	<hr>
+	
+	<p></p>
+	<div id="menu1">
+		<button id="btn1_1">버튼1</button>
+		<button id="btn2_1">버튼2</button>
+		<button id="btn3_1">버튼3</button>
+	</div>
+	
+	<script>
+		//1.상위 요소인 id가 "menu1"인 div 노드만 접근
+		const menu2 = document.getElementById("menu1");
+		
+		//2.접근한 div 노드에만 이벤트 리스너를 설정
+		menu1.addEventListener('click',function(e){
+			const tagName = e.target.tagName; //div 태그의 tagName값을 가져와서 변수에 저장
+			
+			//이벤트 객체의 e.target.id로 조건문을 설정
+			//조건내의 비교할 대상에 요소 태그명은 대문자로 지정 (button -> BUTTON)
+			if(tagName === "DIV"){
+				alert("div 요소의 id값 click!!!");
+			} else if(tagName === "BUTTON"){
+				alert("1번째 button 요소의 tagName값 click!!!");
+			} else if(tagName === "BUTTON"){
+				alert("2번째 button 요소의 tagName값 click!!!");
+			} else if(tagName === "BUTTON"){
+				alert("3번째 button 요소의 tagName값 click!!!");
+			}
+			
+		});
+		
+		
+	</script>
+
+
+	
+	
+</body>
+</html>

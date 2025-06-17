@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM-CSS처리</title>
+<style>
+	#container{
+		width:400px;
+		margin:50px auto;
+		text-align:center;
+	}
+	
+	#rect{
+		width:100px; height: 100px;
+		border:1px solid black;
+		margin:30px auto;
+		transition:5s;	/* 5초만 변화시킴 */
+	}
+	
+</style>
+</head>
+<body>
+	<h3>자바스크립트로 요소에 CSS 적용하기</h3>
+	<p>형식)요소명.style.CSS속성="속성값"</p>
+	<p>CSS속성을 지정할때 속성명에 -가 들어가면 -표시는 없애고 다음문자 대문자로 표시한다</p>
+	<p>background-color : backgroundColor</p>
+	
+	<div id="container">
+		<p>도형 위로 마우스 포인터를 올려 놓으세요....</p>
+		<div id="rect"></div>
+	</div>
+	
+	<script>
+		let myRect = document.querySelector("#rect");
+		
+		myRect.addEventListener('mouseover', function(){ // 마우스 포인트를 올리면
+			//CSS 속성 지정
+			myRect.style.backgroundColor="green"; //배경색 : 초록색;
+			myRect.style.borderRadius = "50%"; //테구리 : 둥근 원모양
+		})
+				
+		myRect.addEventListener('mouseout', function(){ // 마우스 포인트를 올리면
+			//CSS 속성 지정
+			myRect.style.backgroundColor=""; //배경색 : 기존의 값으로;
+			myRect.style.borderRadius = ""; //테구리 : 기존값으로;
+		})
+		
+		
+	</script>
+	
+</body>
+</html>

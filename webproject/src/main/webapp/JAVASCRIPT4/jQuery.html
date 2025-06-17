@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- jQuery 라이브러리 연결 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+
+
+</script>
+<title>jQuery 기본 작성</title>
+</head>
+<body>
+	<p>웹문서에서 자바스크립트를 쉡게 활용을 도화주는 오픈소스 자바스크립트 라이브러리이다.</p>
+	<p>jQuery 라이브러리를 다운로드 하거나 CDN 방식으로 연결해서 사용해야 한다.</p>
+	
+	<h1>jQuery1</h1>
+	<h2>jQuery1</h2>
+	<h3>jQuery1</h3>
+	<h4>jQuery1</h4>
+	<h5>jQuery1</h5>
+	
+	<script>
+		document.querySelector("h1").style.color = "red";
+		
+		const h2 = document.querySelector("h2");
+		h2.style.color = "blue";
+		
+		// 준비구문
+		/* jQuery(document.ready(function(){
+			
+			
+		})); */
+		
+		/* jQuery(document).ready(function(){
+			
+		}) */
+		
+		
+		/* $(function(){
+			
+		}); */
+		
+		// 1.선택자에서 필요한 명령문 1개만 작성
+		// h3태그를 선택해서 글자색을 green으로 변경
+		//$(대상선택:선택자).css('속성명','속성값');
+		$("h3").css('color','green');
+		
+		// 2. 선택자에서 필요한 명령문이 여러개인 경우 작성
+		$("h4").css({
+			'color' : 'black',
+			'fontSize' : '2em',
+			'width': 200,
+			'height': 100,
+			'backgroundColor':'orange',
+			'border':'2px solid #ccc'
+		});
+	
+	</script>
+	
+</body>
+</html>

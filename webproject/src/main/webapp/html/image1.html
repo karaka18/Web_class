@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 삽입</title>
+</head>
+<body>
+<h3>img 태그 : 이미지 삽입</h3>
+
+<!-- 1.절대경로 : 파일이 존재하는 처음 위치부터 시작해서 적어주는 방법이다. -->
+<!-- C:\WEB\workspace\webproject\src\main\webapp\html\image1\tangerines.jpg -->
+
+<!-- 2.상대경로 : 현재 작성중인 html문서 현재 위치부터 시작해서 적어주는 방법이다. -->
+<!-- 1)상위 폴더로 한단계 이동 : ../ -->
+<!-- 2)같은 폴더내에 있는 경우 : 파일명 (or ./파일명) -->
+<!-- 3)하위 폴더로 이동 : 폴더명/파일명 -->
+
+
+<!-- img 속성 -->
+<!-- 1)src 속성:가져올 이미지 파일 (경로를 정확하게 지정) -->
+<!-- 2)alt 속성:가져올 이미지 파일이 지정한 경로에 존재하지 않는 경우 보여줄 대체 텍스트 -->
+<!-- 3)title 속성:이미지 파일 위에 마우스 포인트를 올려두면 설명을 표시(풍선 도움말)  -->
+<!-- 4)width, height 속성 : 이미지 파일의 너비와 높이를 지정 -->
+
+
+<!-- 1)현재 작성하고 있는 html 문서와 이미지 파일이 동일한 위치에 존재하는 경우  -->
+<img src="tangerines.jpg" alt="tangerines.jpg이미지가 존재하지 않습니다.!!" 
+title="tangerines.jpg 이미지 입니다.!!" width="100" height="100"
+>
+<hr>
+
+<!-- 2)현재 작성하고 있는 html 문서의 하위 폴더인 image1 폴더내에 이미지 파일이 존재하는 경우  -->
+<img src="image1/top.jpg" alt="top.jpg 이미지가 존재하지 않습니다.!!">
+<hr>
+
+<!-- 3)현재 작성하고 있는 html 문서의 상위 폴더의 medias 폴더내에 이미지 파일이 존재하는 경우 -->
+<img src="../medias/bg.jpg" alt="bg.jpg 이미지가 존재하지 않습니다.!!"
+width="100" height="100"
+>
+
+
+
+
+
+
+
+</body>
+</html>

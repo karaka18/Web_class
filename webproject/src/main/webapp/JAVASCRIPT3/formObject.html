@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폼객체(form object)</title>
+</head>
+<body>
+	<h3>폼(form)과 자바스크립트</h3>
+	<h3>1. 폼 요소에 접근하고 값을 가져오는 방법</h3>
+	<p>1)id 나 class 속성값을 사용해서 폼 요소에 접근하기</p>
+	<p>2)name 속성값을 사용해서 폼 요소에 접근하기</p>
+	<p>3)폼배열 document.forms[] 프로퍼티를 사용해서 폼 요소에 접근하기</p>
+	<hr>
+	
+	<div id="container">
+		<form name="order">
+			<fieldset>
+				<legend>상품 정보</legend>
+				
+				<ul>
+					<li>
+					상품:		<input type="text" id="product" name="product">
+					</li>
+					
+					<li>
+					개수:		<input type="number" id="prod-num" name="prod-num" value="1" min="1">
+					</li>
+				</ul>			
+			</fieldset>
+			<button type="submit" class="order">주문하기</button>
+		</form>
+	</div>
+	<hr>
+	
+	<span>여기 표시</span>
+	<p id="text"></p>
+	
+	<script>
+//		1)id 나 class 속성값을 사용해서 폼 요소에 접근하기
+//		document.querySelector("#product")
+
+//		2)name 속성값을 사용해서 폼 요소에 접근하기 : form태그의 name속성->요소의 name속성 순서대로 적어준다.
+//		document.order.product
+
+//		3)폼배열 document.forms[] 프로퍼티를 사용해서 폼 요소에 접근하기
+//		document.forms['order'].elements['product']
+//		document.forms['order']['product']
+//		document.forms[0].elements[1]
+
+		
+//		<input type="text" id="product" name="product">에 접근해서 입력받은 데이터값 가져오기
+//		let data1 = document.querySelector("#product");
+		let data2 = document.order.product;
+//		let data3 = document.forms[0].elements[1];
+//		let data4 = document.forms['order'].elements['product'];
+		
+		let text = document.getElementById("text");
+		
+		data2.onkeyup = function(){
+			
+			//let result = this.value;
+			//text.innerText = result;
+			text.innerText = document.order.product.value;
+		}
+		
+		
+	</script>
+	
+	
+	
+	
+</body>
+</html>

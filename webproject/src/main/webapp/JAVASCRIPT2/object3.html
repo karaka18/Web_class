@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내장 객체(기본 객체)</title>
+</head>
+<body>
+	<h3>배열 다루기 : Array 객체의 메서드</h3>
+	
+	<script>
+		let nums = [1,2,3];
+		let chars = ["a", "b", "c", "d"];
+		
+		document.write(`nums 배열 = ${nums} <br>`);
+		document.write(`chars 배열 = ${chars} <br>`);
+		document.write(`<hr>`);
+		
+		//1. 기존의 배열과 다른 배열 합치기(연결) : 형식)배열명.concat(합칠 배열명);
+		let numschars = nums.concat(chars);
+		document.write(`nums.concat(chars) : ${numschars}<br>`);
+		document.write(`<hr>`);
+		
+		//2. 배열내의 각 요소를 하나의 문자열로 합치기 : 형식)배열명.join('구분자');
+		let string1 = nums.join('');
+		document.write(`nums.join('') : ${string1}<br>`);
+		document.write(`<hr>`);
+		
+		let string2 = nums.join('-');
+		document.write(`nums.join('-') : ${string2}<br>`);
+		document.write(`<hr>`);
+
+		let string3 = nums.join('/');
+		document.write(`nums.join('/') : ${string3}<br>`);
+		document.write(`<hr>`);
+		
+		// 3. 배열에 새로운 요소값 추가 : length도 같이 반환한다.
+		// 1) 배열의 맨 끝에 요소 추가 : 형식) 배열명.push(요소값);
+		// 2) 배열의 맨 처음에 요소 추가 : 형식) 배열명.unshift(요소값);
+		
+		// 1) 배열의 맨 끝에 요소값 추가 : 형식)배열명.push(요소값);
+		nums.push(4);
+		document.write(`nums.push(4) : ${nums}<br>`);
+		document.write(`<hr>`);
+		
+		nums.push(5,6,7,8,9,10);
+		document.write(`nums.push(5,6,7,8,9,10) : ${nums}<br>`);
+		document.write(`<hr>`);
+		
+		//2)배열의 맨 처음에 요소값 추가 : 형식)배열명.unshift(요소값);
+		nums.push(10, 20, 30);
+		document.write(`nums.push(10, 20, 30) : ${nums}<br>`);
+		document.write(`<hr>`);
+		
+		// 4.배열에 요소값 제거
+		// 1)배열의 맨 끝에 요소값 제거 : 형식)배열명.pop();
+		// 2)배열의 맨 처음에 요소값 제거 : 형식)배열명.shift();
+		nums.pop();
+		document.write(`nums.pop() : ${nums}<br>`);
+		document.write(`<hr>`);
+		
+		// 2) 배열의 맨 처음에 요소값 제거 : 형식)배열명.shift();
+		nums.shift();
+		document.write(`nums.shift() : ${nums}<br>`);
+		document.write(`<hr>`);
+		
+		// 5.원하는 위치에 요소값 추가, 삭제 : splice() 메서드 -> 원본 배열에 변경이 일어난다.
+		let numbers = [1,2,3,4,5,6,7,8,9,10];
+		
+		// 1) 인수를 1개 지정하는 경우 : 지정한 인덱스 번호부터 배열을 끝까지 모두 삭제
+		// 형식) 배열명.splice(인덱스번호) : 배열에서 현재 지정한 인덱스 번호 위치를 기준으로 삭제
+		// 인덱스 0번위치를 기준으로 2개 요소 삭제
+		numbers.splice(5);
+		document.write(`numbers.splice(5) : ${numbers}<br>`);
+		document.write(`<hr>`);
+		
+		// 2)인수를 지정하는 경우 : 지정한 인덱스 번호부터 지정한 개수만큼 요소를 삭제
+		// 형식)배열명.splice(인덱스번호, 삭제할 요소 개수) : 배열의 현재 지정한 인덱스 번호 위치를 기준으로 지정한
+		// 인덱스 0번위치를 기준으로 2개 요소 삭제
+		numbers.splice(0,2);
+		document.write(`numbers.splice(0, 2) : ${numbers}<br>`);
+		document.write(`<hr>`); 
+		
+		// 3) 인수를 3개 지정하는 경우 : 지정한 인덱스 번호부터 지정한 개수만큼 요소를 삭제하고 요소값을 추가
+		// 형식)배열명.splice(인덱스번호, 삭제할 요소 개수, 추가할 요소값)
+		// 배열의 0번째 위치부터 1개를 삭제하고 10,11,12 요소값으로 그 자리에 추가
+		numbers.splice(0, 1, 10, 11, 12);
+		document.write(`numbers.splice(0, 1, 10) : ${numbers}<br>`);
+		document.write(`<hr>`);
+		
+		// 6.배열에서 잘라내서 가져온 요소값으로 새로운 배열 만들기 : slice() 메서드 -> 원본 배열에 변경이 일어나지 않는다.
+		let color = ['red', 'green', 'blue', 'white', 'black'];
+		document.write(`color 배열 : ${color} <br>`);
+		document.write(`<br>`);
+		
+		// 1)배개변수가 1개인 경우 : 지정한 인덱스 번호부터 배열을 끝까지 모두 가져와서 새로운 배열로 만든다.
+		// 형식) 배열명.slice(인덱스번호);
+		// 배열의 2번째 인덱스부터 배열의 끝까지 요소값을 잘라와서 새로운 배열 color2에 새로운 배열로 만든다.
+		
+		let color2 = color.slice(2);
+		document.write(`color2 배열 : ${color2} <br>`);
+		document.write(`color 원본 배열 변경 확인 : ${color} <br>`);
+		document.write(`<hr>`);
+		
+		// 1)매개변수가 2개인 경우 : 지정한 인덱스 번호부터 지정한 개수만큼 요소를 가져와서 새로운 배열로 만든다.
+		// 형식)배열명.slice(시작 인덱스번호, 종료 인덱스 번호); -> 2 ~ 4까지의 인덱스 번호 구간(범위)를 지정한다.
+		// 종료 인덱스 위치 직전(바로 앞까지만 : 2 ~ 3번 인덱스 범위)까지만 지정된다.
+		
+		let color3 = color.slice(2, 4);
+		document.write(`color3 배열 : ${color3}<br>`);
+		document.write(`color 원본 배열 변경 확인 : ${color}`);
+		document.write(`<hr>`);
+		
+		
+		
+		
+		
+		
+	</script>
+
+</body>
+</html>

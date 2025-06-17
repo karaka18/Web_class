@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>날짜 관련 객체 : Date 객체</title>
+</head>
+<body>
+	<h3>날짜 관련 객체 : Date 객체</h3>
+	
+	<script>
+		let now = new Date(); // 현재 날짜와 시간으로 객체 생성
+		let now2 = new Date("2020-02-27"); // 지정한 날짜로 객체 생성
+		document.write(`현재 날짜와 시간 : ${now}<br>`);
+		document.write(`지정한 날짜와 시간 : ${now2}<br>`);
+		document.write(`지역에 맞게 날짜 형식 변경해서 출력 : ${now.toLocaleDateString()}<br>`);
+		document.write(`지역에 맞게 날짜 형식 변경해서 출력 : ${now.toLocaleTimeString()}<br>`);
+		document.write(`<hr>`);
+
+		document.write(`${now.getFullYear()} 년 `);
+		document.write(`${now.getMonth()+1} 월 `); // 월은 0월부터 시작 +1 월로 계산해야 함
+		document.write(`${now.getDate()} 일 `);
+		document.write(`${now.getDay()} (0 ~ 6요일) `); // 요일이 정수로 표시	
+		
+
+		
+		
+		
+		
+		
+		
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 변수와 자료형</title>
+</head>
+<body>
+<h3>자바스크립트에서 변수에 담겨져 있는 자료형 확인 : typeof 키워드</h3>
+<p>형식) typeof 데이터값(변수명);</p>
+<hr>
+
+<h3>나이 계산 프로그램 작성(태어난 년도를 입력받아서 자신의 나이를 계산해서 출력)</h3>
+<p>템플릿 문자열 : ES6버전에 추가 -> 역쿼트(키보드의 tab키 위의 ~ 물결표가 있는 키를 사용)</p>
+<p> 문자열을 출려가는 경우 연결연산자 (+) 를 사용하지 않고 템플릿 문자열 형식용으로 편리하게 표현할 수 있다.</p>
+	<!-- 형식)document.write('문자열 변수 태그...'); // 백틱(역쿼트) -->
+	<!-- 형식)document.write('문자열 ${수식 or 변수} 태그...'); -->
+<script>
+	let currentYear = 2025;
+	let birthYear;
+	let age;
+	
+	birthYear = prompt("태어난 연도를 입력하세요 >>> ");
+	age = currentYear - birthYear;
+	// document.write(currentYear "년 현재<br>");
+	document.write(`${currentYear} 년 현재<br>`);
+	
+	// document.write(birthYear + "년에 태어난 사람의 나이는 " + age + "세 입니다!!!<br>");
+	document.write(`${birthYear} 년에 태어난 사람의 나이는 ${age} 세 입니다!!!<br>`);
+	
+	document.write(`currentYear 변수 출력 = ${currentYear} <br>`);
+	document.write(`currentYear 변수의 자료형 출력 = ${typeof currentYear} <br>`);
+	
+	alert("나이는 " + age + "세입니다.");
+	
+	
+</script>
+
+
+
+</body>
+</html>

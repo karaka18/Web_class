@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#container{
+		width:640px; height:426px;
+		
+		/* 자식 요소의 position이 absolute일 경우 부모 요소가 relative로 지정되어 있으면
+		부모 요소를 기준으로 자식 요소가 이동하게 된다. */
+		position:relative;
+	}
+
+	h1{
+		color:#fff;
+		font-size:5em;
+		text-shadow:2px 3px 0 #000;
+		
+		/* 자식 요소의 position이 absolute일 경우 부모 요소가 relative로 지정되어 있으면
+		부모 요소를 기준으로 자식 요소가 이동하게 된다. */
+		position:absolute;
+		right:100px;
+		bottom:100px;
+	}
+	
+	
+</style>
+
+
+</head>
+<body>
+
+<h3>그림 배경위에 문자 배치시키기</h3>
+<div id = "container">
+	<img src="image2/bg.jpg">
+	<h1>CSS3</h1>
+</div>
+</body>
+</html>

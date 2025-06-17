@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document 객체(DOM)</title>
+</head>
+<body>
+	<h3>자바스크립트로 동적 객체(요소, tag) 생성</h3>
+	<h3>웹요소의 내용을 가져오기, 수정, 생성 : innerText, innerHTML, innerContent</h3>
+	<hr>
+	
+	<p>예제1 : 지정한 요소 영역에 링크(a) 태그 삽입 </p>
+	<p>표시할 영역 만들기</p>
+	<div id = "text">
+		<span>innerText</span>
+		<span id="text1"></span><br>
+		
+		<span>innerHTML</span>
+		<span id="text2"></span><br>
+		
+		<span>innerContent</span>
+		<span id="text3"></span><br>
+		
+		<img src="image4/cup-1.jpg" alt="머그컵" id="cup" width="100" height="100">
+		<span id="text4"></span><br>
+	</div>
+	
+	<hr>
+	<p>이미지를 클릭하면 다른 이미지로 변경</p>
+	<div id="container">
+		<img src="image4/cup-2.jpg" id="cup1">
+	
+	</div>
+	
+	<script>
+	//1.innerText 프로퍼티 사용 : 문자열로 저장되고 생성되어 표시된다.
+	let text1 = document.getElementById('text1');
+	text1.innerText = '<a href="http://www.naver.com">링크태그</a><br>';
+	text1.onclick = () => text1.innerText = '추천! 오늘의 커피';
+	//text1.onclick = function() { text1.innerText = '추천! 초늘의 커피'};
+	console.log(text1.innerText);
+	
+	//2.innerHTML 프로퍼티 사용 : 문자열에 태그가 섞여 있는 경우 태그 기능 수행해서 생성시키고 표시된다.
+	let text2 = document.getElementById('text2');
+	text2.innerHTML = '<a href="http://www.naver.com">링크태그</a><br>';
+	text2.onclick = () => text2.innerHTML = '<b>추천! 오늘의 커피</b>';
+	
+	//3.textContent 프로퍼티 사용 : innerText 프로퍼티와 동일하다.
+	let text3 = document.getElementById('text3');
+	text3.textContent = '<a href="http://www.naver.com">링크태그</a><br>';
+	text3.onclick = () => text3.textContent = '추천! 오늘의 커피';
+	
+	//4.이미지를 클릭하면 아래쪽에 '추천! 오늘의 머그컵' 표시
+	let cup = document.getElementById('cup');
+	cup.onclick = () => text4.innerText = '추천! 오늘의 머그컵';
+	
+	//4-1.이미지를 클릭하면 아래쪽에 '추천! 오늘의 머그컵' 메세지를 표시하고 이미지 변경
+	let cup1 = document.querySelector('#cup');
+	cup1.onclick = function() {cup1.src="image4/cup-2.jpg"};	
+	//cup1.onclick = () => text4.innerText = '추천! 오늘의 머그컵';
+	
+	</script>
+	
+	<script>
+		//4-2.이미지를 클릭하면 다른 이미지로 변경(cup-3.jpg)
+		let cup2 = document.querySelector("#cup1");
+		cup2.onclick = changePic; //함수명뒤에 ()는 붙이지 않는다.
+		
+		function changePic(){
+			cup2.src = "image4/cup-3.jpg";
+		}
+		
+	</script>
+
+
+
+
+</body>
+</html>

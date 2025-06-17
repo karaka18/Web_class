@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Node 추가 삭제</title>
+</head>
+<body>
+	<h3>속성값이 있는 새로운 요소 추가하고 속성값 변경하기</h3>
+	<p>이미지 요소 생성과 속성값 변경</p>
+	<div id="info_1">
+			<img src="images6/dom.jpgalt='돔 트리 예제 이미지' title="dom.jpg"/돔 트리 예제 이미지">-->
+		
+	</div>
+	
+	<script>
+		
+		
+		//1.img 요소 노드 만들기
+		let newImg1 = document.createElemente('img');
+		
+		//2.src, alt 속성 노드 만들고 속성값 지정하기
+		let srcNode1 = document.createAttribute('src');
+		let altNode1 = document.createAttribute('alt');
+		let titleNode1 = document.createAttribute('title');
+		
+		//3.img 요소 노드에 만들어진 속성노드의 값 넣기
+		srcNode1.value = "images/dom.jpg";
+		altNode1.value = "돔 트리 예제 이미지";
+		titleNode1.value = "dom.jpg/돔 트리 예제 이미지";
+		
+		//img 요소 노드에 속성 노드 연결하기
+		newImg1.createAttributeNode(srcNode1);
+		newImg1.createAttributeNode(altNode1);
+		newImg1.createAttributeNode(titleNode1);
+		
+		//자식노드(img)를 부모 노드에 연결하기 : img 요소를 div에 붙이기
+		document.getElementById("info_1").appendChild(newImg1);
+		
+		
+	
+	</script>
+	
+</body>
+</html>

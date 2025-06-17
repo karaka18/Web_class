@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>네비게이트(Navigate) 객체</title>
+</head>
+<body>
+	<h3>Navigate 객체</h3>
+	<p>사용자의 브라우저 종류, 버전, 플러그인 설치정보, 자바스크립트 엔진 종류,
+	모바일에서 접속했는지 등을 확인할 수 있다.</p>
+	
+	<input type="button" value="브라우저정보" onclick="win1()">
+		
+	<script>
+		function win1(){
+			document.write(`<p>${navigator.userAgent}</p>`);
+		} 
+		
+	</script>
+	
+	<script>
+		document.write(`<p>${navigator.appCodeName}</p>`);
+		document.write(`<p>${navigator.appName}</p>`);
+		document.write(`<p>${navigator.appVersion}</p>`);
+		document.write(`<p>${navigator.language}</p>`);
+		document.write(`<p>${navigator.cookieEnabled}</p>`);
+		document.write(`<p>${navigator.geolocation}</p>`);
+	</script>
+	
+</body>
+</html>

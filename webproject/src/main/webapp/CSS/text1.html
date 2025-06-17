@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 관련 스타일</title>
+	
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+body {
+
+	/* 글꼴 지정(font-family 속성) : 최대 3개의 글꼴을 콤마로 구분해서 지정 */
+	font-family:바탕, "맑은 고딕", 굴림;
+
+	/* 글자 크기 지정 (font-size 속성) : 고정크기(px), 상대크기(em, rem,백분율%) */
+	font-size:20px;
+}
+
+h1 {
+	font-family:굴림, "맑은 고딕", 바탕;
+	font-size:4em;
+}
+
+.accent {
+	/* 글자를 굵게 지정(font-weight 속성) : bold, bolder, lighter, 100 ~ 900사이값 */
+/* 	font-weight: bold; */
+	font-weight: 900;
+}
+
+.italic{
+	/* 글자를 기을여서 표시 (font-style 속성) : italic */
+	font-style: italic;
+}
+
+h2{
+	font-family: "Nanum Brush Script", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+</style>
+
+</head>
+<body>
+
+<h3>텍스트 관련 스타일</h3>
+
+<h1>레드향</h1>
+<p>껍질에 <span class="accent">붉은 빛</span>이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+<p class="italic">레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고 과육이 붉고 통통하다.</p>
+<p class="italic">비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방등에 좋은 것으로 알려져 있다.</p>
+
+<p class="italic accent">비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방등에 좋은 것으로 알려져 있다.</p>
+
+<h2></h2>
+
+</body>
+</html>

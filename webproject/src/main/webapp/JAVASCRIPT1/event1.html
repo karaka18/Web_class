@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트(event)와 이벤트 처리기</title>
+</head>
+<body>
+	<h3>이벤트(event)와 이벤트 처리기(eventListener / autoHadler)</h3>
+	<p>이벤트(event): 웹문서내의 행요소(태그)에서 이루어지는 사건(동작이다.)</p>
+	<p>이벤트 처리기(eventListener/eventHandler) : 이벤트가 발생했을때 처리 기술(실행할 함수)이다.</p>
+	<p>이벤트 처리기 방식 : 1)인라인 방식, 2)프로퍼티 방식, 3)addEventListener 방식</p>
+	<hr>
+	
+	<p>1)인라인(inline)방식 : 이벤트(사건,동작)를 HTML 요소(태그)의 속성으로 직접 지정하는 방식이다.</p>
+	형식) <태그 on이벤트명 = "함수명">
+	
+	<form action="#" method="get">
+	
+		<p>1.문서 로딩 이벤트</p>
+		<!-- <body onload="alert('onload : 문서의 로딩이 끝남');"> -->
+		
+		<p>2.마우스 이벤트</p>
+		<button type="button" onclick="alert('onclick : 마우스로 클릭')">버튼을 클릭할때 이벤트</button><br>
+		
+		<p>3.키보드 이벤트</p>
+		키를 눌렀다가 손을 떼는 이벤트<br>
+		<input type="text" name="t1" onkeyup="alert('onkeyup : 키에서 손을 땔때')"><br>
+		
+		<p>4.폼 이벤트</p>
+		1)포커스가 해제될 때 이벤트<br>
+		<input type="text" name="t2" onblur="alert('onblur : 포커스를 잃었을 때')"><br>
+		
+		2)내용이 변경될 때 이벤트<br>
+		<input type="text" name="t3" onchange="alert('onchange : 내용이 변경될 때')"><br>
+		
+		<select name="choice" onchange="alert('onchange : 내용이 변경될 때')"><br>
+			<option value="목록1">목록1</option>
+			<option value="목록2">목록2</option>
+			<option value="목록3">목록3</option>
+		</select>
+	</form>
+	
+</body>
+</html>

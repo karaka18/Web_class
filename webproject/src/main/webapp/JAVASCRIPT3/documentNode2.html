@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>노드 추가 삭제</title>
+</head>
+<body>
+	<h1>Web Programming</h1>
+	<p>공부할 주제를 기록해 보세요</p>
+	
+	<form action="#">
+		<input type="text" id="subject" name="subject" autofocus>
+		<button type="submit">추가</button>
+		
+		<!-- 1. name="subject" 입력상자의 데이터값이 서버로 전송된다. -->
+		<!-- <button type="submit">추가</button> -->
+		
+		
+		<!-- 2. name="subject" 입력상자의 데이터값이 서버로 전송도 되고 li목록으로 ul태그내에 등록도 된다. -->
+		<!-- <button type="submit" onclick="newRegister();">추가</button> -->
+		
+		<!-- 3. name="subject" 입력상자의 데이터값이 서버로 전송도 되고 li목록으로 ul태그내에 등록만 된다. -->	
+		<!-- <button type="submit" onclick="newRegister(); return false;">추가</button> -->
+	
+		
+<!--	<button type="submit" onclick="newRegister(); return false;">추가</button>
+		<button type="submit" onclick="newRegister()">추가</button>-->
+		
+		
+<!-- 	button 태그의 type속성 : submit, reset, button 지정 가능 -->
+<!-- 	type 속성을 지정하지 않으면 submit을 지정한 것으로 인식 (form태그 내에서) -->
+<!--	return false; -> submit 역할을 취소하는 구문이다.(기본 기능을 끄고 함수만 수행하라고 알려준다.)-->
+	
+	</form>
+	<hr>
+<!-- text 상자에서 입력받은 텍스트를 붙여넣는 영역 -->
+	<ul id="itemList"></ul>
+	
+	<script>
+		function newRegister(){
+			// 요소 노드 추가
+			let newItem = document.createElement("li");
+			
+			// 폼 내의 텍스트 필드 요소 가져오기
+			let subject = document.querySelector("#subject");
+			
+			// 가져온 텍스트 필드 내의 입력받은 값을 텍스트 노드로 만들기
+			let newText = document.createTextNode(subject.value);
+			
+			// 텍스트 노드를 요소 노도의 자식 노드로 추가
+			newItem.appendChild(newText);
+			
+			// 웹문서에서 상위 요소(ul 요소) 가져오기
+			let itemList = document.querySelector("#itemList");
+			
+			// 상위 노드(ul 요소)에 자식 노드(li 요소) 붙이기
+			itemList.appendChild(newItem);
+						
+			subject.value = ""; // 텍스트 필드 내의 값을 공백으로 만들도록	
+			
+		}	
+	</script>
+	
+	<p>버튼의 기본 동작(submit 기능)을 취소하고 함수만 수행하도록 지정</p>
+	
+	
+	<script>
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			const button = document.querySelector("button");
+			
+			button.addEventListener('click', function(event){
+				
+				event.preventDefault(); // 버튼의 기본 동작(submit 기능)을 취소
+				newRegister();
+				
+			});
+		});
+			
+	</script>
+	
+	<p>항목을 클릭하면 삭제하기</p>
+	<script>
+			const itemList = document.querySelector("#itemList");
+			
+			itemList.addEventListener('click', function(event){
+				if(event.target.tagName == "LI"){ 	// 클릭한 요소가 li요소이면
+					if(confirm("삭제하시겠습니까?")){		// 확인 대화상자 표시
+						event.target.remove();		// 클릭한 요소만 삭제
+					}
+				}
+			});
+			
+		
+	</script>
+	
+	
+	
+</body>
+</html>

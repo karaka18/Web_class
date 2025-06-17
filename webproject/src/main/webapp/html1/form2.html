@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력양식(form) 만들기 - 1</title>
+</head>
+<body>
+
+<form method="get" action="#">
+
+<p>4)input type 속성(숫자 입력 전용) : number(스핀 단추), range(슬라이드 바) 속성값 </p>
+<input type="number">
+<input type="range">
+
+<ul>
+
+	<li>type=number(스핀단추 형식): <input type="number" min="1" max="10"> </li>
+	<li>type=number(스핀단추 형식): <input type="number" min="1" max="10" step="2" value="5"></li>
+	<li>type=range(슬라이드바 형식): <input type="range" min="1" max="10"> </li>
+	<li>type=range(슬라이드바 형식): <input type="range" min="1" max="100" step="1" value="50"></li>
+
+</ul>
+<hr>
+
+<h3>문서내에 레이아웃(영역) 지정해서 요소(tag) 넣기</h3>
+<h3>1) div 태그 : 문서내에서 레이아웃(영역)을 만들때 주로 사용한다</h3>
+<p>태그 자체로는 의미를 가지지 않는다.(요소(tag) or문자열등을 넣어서 있는 빈공간 역할)</p>
+<p>width, height 크기를 가질 수 있다.</p>
+
+<div style="background-color: yellow; 
+width:150px; 
+height:150px; 
+border:1px solid black;">
+첫번째 div 영역</div>
+
+
+<div style="background-color: red; 
+width:200px; 
+height:200px; 
+border:3px solid black;"
+
+>두번째 div 영역</div>
+
+<h3>2)span 태그 : 문서내에서 레이아웃(영역)을 만들때 주로 사용한다</h3>
+<p>태그 자체로는 의미를 가지지 않는다.(요소(tag) or문자열을 넣어서 있는 빈공간 역할)</p>
+<p>width, height 크기를 가질 수 없다.(자신의 내용만큼의 크기만 가질 수 있다.)</p>
+
+<span style="background-color: orange; width:150px; height: 150px; border:10px solid black;">오늘은</span>
+<span style="background-color: yellow; width:150px; height: 150px; border:10px solid black;">HTML</span>
+<span style="background-color: green; width:150px; height: 150px; border:10px solid black;">공부하는 날</span>
+<hr>
+
+<div style="border:1px solid black;">
+value1 : <input type="number" min="1" max="10" step="1" value="1" 
+oninput="document.getElementById('value1').innerHTML=this.value;"
+>
+숫자값 표시 : <span id="value1"></span>
+</div>
+
+
+<div style="border:1px solid black;">
+value2 : <input type="range" min="1" max="10" step="1" value="1" 
+oninput="document.getElementById('value2').innerHTML=this.value;"
+>
+숫자값 표시 : <span id="value2"></span>
+</div>
+
+</form>
+
+
+
+
+</body>
+</html>

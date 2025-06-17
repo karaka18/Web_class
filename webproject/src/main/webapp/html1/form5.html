@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력 앵식(form) 만들기 - 4</title>
+</head>
+<body>
+
+<h3>input tag 주요 속성 </h3>
+1.autocomplete 속성 : 폼이나 폼 요소에 자동완성 기능의 지원 여부를 지정(checkbox, radio, 버튼 유형 제외)
+  형식)autocomplete = "on/off"
+2.autofocus 속성 : 페이지가 로드 될 때 특정 폼 요소에 자동으로 커서가 표시(get focus)되도록 지정
+3.placeholder 속성 : 폼 요소에 어떤 내용을 입력해야 하는지 간단한 설명(힌트) 표시
+  형식)placeholder ="설명(힌트)"
+4.readonly 속성 : 사용자가 입력하지는 못하고 읽기만 할 수 있는 읽기 전용 폼 요소로 만듬
+5.required 속성 : 필수 입력 필드를 지정(지정한 폼 요소값에 데이터가 반드시 입력되어야만 서버로 전송할 수 있음)
+
+
+
+<form action="#" method="get">
+<fieldset>
+      <legend>배송 정보</legend>
+      <ul id="shipping">
+      
+        <li>
+          <label for="prod">주문 상품</label>
+          <input type="text" name="prod" id="prod" value="상품용 3kg" readonly>
+        </li>
+        
+        <li>
+          <label for="user-name">이름 </label>
+          <input type="text" name="user-name" id="user-name" required autofocus autocomplete="off">
+        </li>
+        
+        <li>
+          <label for="addr">배송 주소</label> 
+          <input type="text" name="addr" id="addr" required autocomplete="off">
+        </li>
+        
+        <li>
+          <label for="mail">이메일</label>
+          <input type="email" name="mail" id="mail" placeholder="aaa@naver.com 형식으로 입력">
+        </li> 
+               
+        <li>
+          <label for="phone">연락처</label>
+          <input type="tel" name="phone" id="phone" placeholder="하이픈(-) 표시는 제외하고 입력">
+        </li>
+        
+        <li>
+          <label for="d-day">배송 지정</label>
+          <input type="date" name="d-day" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+        </li>
+                
+      </ul> 
+       
+    </fieldset>
+    
+    <div>
+      <input type="submit" value="주문하기"> 
+      <input type="reset" value="취소하기">
+    </div> 
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>

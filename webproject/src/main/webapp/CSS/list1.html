@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>목록 스타일</title>
+<style>
+/* 목록 표시 스타일 변경 : 3가지 속성 */
+/* 1. 목록 표시 변경 속성 : list-style-type 속성*/
+/* 2. 목록 표시를 이미지로 변경하는 속성 : list-style-image 속성*/
+/* 3. 목록 표시 들여쓰기 변경 속성 : list-style-position 속성*/
+
+.book1{
+	/* list-style-type: square; */ /* 채운 사각형 모양 */
+	list-style-type: none; /* 목록 표시 없애기 */
+}
+
+.book2{
+	/* list-style-type: decimal-leading-zero; */ /* 0이 붙은 숫자로 표시 */
+	list-style-type: none;
+}
+
+.book3{
+	/* CSS에서 이미지 가져오기 : url("이미지파일이름(경로를 포함)")*/
+	list-style-image: url(../html/image1/dot.png);
+}
+
+.book4{
+	list-style-position: inside; 
+}
+
+.book5{
+	list-style: decimal-leading-zero inside;
+}
+
+
+</style>
+</head>
+<body>
+<h3>목록 스타일 : ol, ul태그의 스타일 만들기</h3>
+
+<ul class="book1">
+	<li>목록 스타일</li>
+	<li>list-style-type 속성</li>
+	<li>list-style-position 속성</li>
+	<li>list-style-image 속성</li>
+</ul>
+<hr>
+<ol class="book2">
+	<li>목록 스타일</li>
+	<li>list-style-type 속성</li>
+	<li>list-style-position 속성</li>
+	<li>list-style-image 속성</li>
+</ol>
+<hr>
+<ol class="book3">
+	<li>목록 스타일</li>
+	<li>list-style-type 속성</li>
+	<li>list-style-position 속성</li>
+	<li>list-style-image 속성</li>
+</ol>
+<hr>
+<ol class="book4">
+	<li>목록 스타일</li>
+	<li>list-style-type 속성</li>
+	<li>list-style-position 속성</li>
+	<li>list-style-image 속성</li>
+</ol>
+<hr>
+<ol class="book5">
+	<li>목록 스타일</li>
+	<li>list-style-type 속성</li>
+	<li>list-style-position 속성</li>
+	<li>list-style-image 속성</li>
+</ol>
+<hr>
+
+
+
+</body>
+</html>

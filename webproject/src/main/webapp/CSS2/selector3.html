@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>고급 선택자(구조 가상 선택자)</title>
+<style>
+ul li {
+	list-style:none;
+	display: inline-block;
+	border:1px solid black;
+	padding:20px;
+	margin:10px;
+}
+
+/* li 요소마다 배경색 지정 */
+/* 1)요소:nth-child(n) -> 동일한 부모내에 모든 요소중에 n번째 자식 요소를 선택 */
+ul li:nth-child(1) { background-color: red;}
+ul li:nth-child(2) { background-color: orange;}
+ul li:nth-child(3) { background-color: yellow;}
+ul li:nth-child(4) { background-color: green;}
+ul li:nth-child(5) { background-color: blue;}
+ul li:nth-child(6) { background-color: navy;}
+ul li:nth-child(7) { background-color: purple;}
+
+/* 2)1번째 자식 요소 선택 */
+ul li:first-child {
+	border-radius: 10px 0 0 10px;
+}
+
+/* 3)마지막 자식 요소 선택 */
+ul li:last-child {
+	border-radius: 0 10px 10px 0;
+}
+
+/* 4)홀수번째 자식 요소들 선택 */
+/* 형식) 요소:nth-child(2n+1), 요소:nth-child(odd) */
+ul li:nth-child(2n + 1) {
+	background-color: #eee;
+	font-weight: 900;
+}
+
+/* 5)짝수번째 자식 요소들 선택 */
+/* 형식) 요소:nth-child(2n), 요소:nth-child(even) */
+ul li:nth-child(even) {
+	background-color: black;
+	color:#fff;
+	font-weight: 900;
+}
+
+
+</style>
+
+</head>
+<body>
+<h3>구조 가상 선택자 : 특정 위치에 있는 요소를 선택하는 선택자</h3>
+
+<ul>
+	<li>빨강</li>
+	<li>주황</li>
+	<li>노랑</li>
+	<li>초록</li>
+	<li>파랑</li>
+	<li>남색</li>
+	<li>보라</li>
+</ul>
+
+
+
+</body>
+</html>

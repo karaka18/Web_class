@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력양식(form) 만들기 - 5</title>
+</head>
+<body>
+
+<form method="get" action="#">
+
+<h3>11)textarea 태그 : 여러줄을 입력하는 텍스트 영역을 만듬</h3>
+<p>style="resize:none;" 속성으로 크기 조절 못하도록 지정 </p>
+
+<textarea name="line" rows="4" cols="40" placeholder="메모를 남기세요 " style="resize:none;"></textarea>
+<hr>
+
+<h3>12)select, option 태그 : 드롭다운목록(drop down list)을 만듬</h3>
+<p>value속성 : 서버에 넘겨주는 값을 지정해주어야 함!!!</p>
+<p>selected 속성 : 기본적으로 선택되어 있는 값을 지정</p>
+
+<select name="gift">
+	<option value="선물용3kg">선물용 3kg</option>
+	<option value="s5" selected>선물용 5kg</option>
+	<option value="h3">가정용 3kg</option>
+	<option value="h5">가정용 5kg</option>
+</select>
+<hr>
+
+<p>select 태그의 속성 지정 </p>
+<p> size속성 : 화면에 표시할 목록 개수, 
+multiple 속성 : 2개 이상의 항목을 동시에 선택 가능
+(Ctrl + 클릭: 따로 선택, Shift + 클릭: 연속해서 선택)</p>
+
+<select size="3" multiple name="gift1">
+	<option value="선물용3kg">선물용 3kg</option>
+	<option value="s5" selected>선물용 5kg</option>
+	<option value="h3">가정용 3kg</option>
+	<option value="h5">가정용 5kg</option>
+</select>
+
+<div>
+      <input type="submit" value="주문하기"> 
+      <input type="reset" value="취소하기">
+</div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 작성하기</title>
+<script type="text/javascript" src="js/sample.js">
+
+</script>
+</head>
+<body>
+	<h3>내부 자바스크립트 형식 작성</h3>
+	<!-- 1)<script> ~~ </script> 태그 사이에 실행 코드를 작성한다. -->
+	<!-- <script> 태그는 하나의 문서에서 여러개 작성할 수 있다. -->
+	<!-- 3)HTML 문서내에 어느 곳이나 위치할 수 있고 삽입된 자리에서 바로 스크립트가 실행(해석)된다. -->
+	
+	<script type="text/javascript">
+		alert("(내부)자바스크립트를 배웁니다.!!!");
+	</script>
+	<hr>
+	
+	<h3>외부 자바스크립트 형식 작성</h3>
+	<!-- 1) <script> 태그 없이 자바스크립트 소스만 작성하고 확장자는 *.js 파일로 저장한다. -->
+	<!-- 2) html 문서내에 <script> ~~ </script> 태그 사이에 실행 코드를 작성한다. -->
+	<!-- 형식) script type = "type지정" src = "외부스크립트 파일경로"></script> -->
+	<hr>
+	
+	<h3>3.요소(태그)의 속성으로 사용</h3>
+	<input type="button" value="click" onclick="alert('클릭요!!')">
+	<button type="button" ondblclick="alert('더블클릭요!!')">더블클릭</button>
+	<button type="button" onmouseover="alert('버튼 위에 마우스 올리기!!!')">mouseover</button>
+	
+</body>
+</html>

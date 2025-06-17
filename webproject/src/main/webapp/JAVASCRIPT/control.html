@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>제어문</h3>
+	<p>동등 연산자(==)와 일치 연산자(=== : 자료형과 데이터값까지 일치해야 함.</p>
+	<p>		   (!=)		</p>
+	
+	
+	
+	
+	<script>
+		let memNum = prompt("입장객은 몇 명인가여?");
+		let colNum = prompt("한 줄에 몇 명씩 앉습니다.<");
+		
+		document.write(`memNum 변수의 자료형 출력 = ${typeof memNum}<br>`);
+		document.write(`colNum 변수의 자료형 출력 = ${typeof colNum}<br>`);
+		
+		if(memNum % colNum === 0){
+			// parseInt() 메서드 : 정수형으로 데이터형 변환
+			rowNum = parseInt(memNum / colNum);
+		}else
+			rowNum = parseInt(memNum / colNum) + 1;	// 남은 입장객이
+			
+		document.write(`모두 ${rowNum} 개의 줄이 필요합니다.<br>`);
+		document.write(`rowNum 변수의 자료형 출력 = ${typeof rowNum}<br>`);
+		
+	
+	</script>
+	
+	
+	
+</body>
+</html>

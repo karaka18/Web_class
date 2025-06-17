@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>모달창(modal)</title>
+
+<style>
+
+body {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:100vw;
+	height: 100vh;
+}
+
+#modal-contents {
+	background-color: #eee;
+	width:500px;
+	padding:20px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px #ccc;
+}
+
+#title {
+	font-size:2em;
+	margin-bottom:20px;
+	text-align: center;
+}
+
+/* 나중에 적용할 title CSS 미리 만들기 */
+.clicked {
+	background-color: yellow;
+}
+
+
+#profile {
+	background-color: #d6e3f5;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	
+	padding:10px;
+}
+
+#profile img {
+	width:100px; height: 100px;
+	object-fit:cover;
+	border-radius: 5px;
+	margin-right: 40px;
+}
+
+#desc {
+	width:300px;
+	display:flex;
+	flex-direction: column;
+	
+}
+
+.user {
+	width:290px;
+	font-weight: 900;
+	background-color: #faeaea;
+	margin:10px 0;
+
+}
+
+/* 나중에 이름에 적용할 CSS 미리 만들기 */
+.blue-italic {
+	background-color: skyblue;
+	font-style: italic;
+	color:orange;
+}
+
+</style>
+
+</head>
+<body>
+
+<h3>classList 프로퍼티(객체)</h3>
+<!-- 1)해당 요소의 class 속성을 다룰때 사용한다. -->
+<!-- 2)해당 요소에 class 속성의 스타일을 추가하거나 삭제할 때 사용한다. -->
+<!-- 3)미리 css 스타일을 클래스명을 지정해서 만들어놓아야 한다. -->
+<!-- 형식)요소명.classList.add('클래스명') : 요소에 class를 추가--> 
+<!-- 형식)요소명.classList.remove('클래스명') : 요소에 class를 삭제-->
+<!-- 형식)요소명.classList.contains('클래스명') : 요소에 class가 포함 되었는지 여부-->
+
+
+<input type="color">
+<div id="modal-contents">  
+     
+     <h1 id="title">My Profile</h1>
+     <div id="profile">
+       <img src="../CSS3/image4/cat.png" alt="모달박스"> 
+       
+       <div id="desc">
+         <p class="user">이름 : 모달박스</p>
+         <p class="user">주소 : 부산광역시 부산진구 동천로</p>
+         <p class="user">연락처 : 010-1234-5678</p>
+       </div>
+       
+     </div> 
+   
+ </div>
+ 
+ <script>
+ const title = document.querySelector('#title');
+ 
+ /*
+ //title을 클릭하면 배경색을 yellow 로 변경
+ title.onclick = function() {
+	// 형식)요소명.classList.add('클래스명') : 요소에 class를 추가
+	title.classList.add('clicked');
+	
+ }
+ */
+ 
+ /*
+ // 형식)요소명.classList.add('클래스명') : 요소에 class를 추가
+ title.onclick = function() {
+ 	 	
+	if(!title.classList.contains('clicked')){
+		title.classList.add('clicked');		
+	} else {
+		title.classList.remove('clicked');	
+	}	
+ 	
+  }
+ */
+ 
+ // title.classList.toggle('클래스명'): 반복적으로 스타일을 적용하거나 적용하지 않는 상태로 만든다.(on/off);
+ //title을 클릭하면 배경색을 yellow 로 변경
+  title.onclick = function() {
+   	title.classList.toggle('clicked');	   	
+    }
+  
+  //이름을 클릭하면  배경색, 이탤릭, 문자색:orange 로 변경
+  let userName = document.querySelectorAll('#desc p')[1];
+  	userName.onclick = function() {
+	userName.classList.toggle('blue-italic');
+  }
+  
+ </script>
+
+</body>
+</html>

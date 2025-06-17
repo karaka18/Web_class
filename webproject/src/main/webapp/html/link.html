@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>하이퍼링크 삽입하기</title>
+</head>
+<body>
+<h3>a태그로 하이퍼링크(HyperLink) 만들기</h3>
+<a href="table1.html">내가 만든 웹페이지</a>
+<hr>
+
+<!-- target 속성 : _blank -> 새로운 창에서 연결된 웹페이지를 표시한다.!! -->
+<!-- target 속성 : _self -> 기본값, 하이퍼링크를 만들어놓은 화면에서 웹페이지를 표시한다.!! -->
+<!--  뒤로가기, 앞으로 가기 단추를 이용해서 이동시키면서 웹페이지를 사용해햐 한다. -->
+<a href="http://www.naver.com" target="_blank">네이버로 갑니다</a>
+<hr>
+
+<p>이미지를 클릭하면 image1.html 문서로 이동(연결): 새로운 창으로 </p>
+
+<a href="image1.html" target="_blank">
+<img src="image1/tangerines.jpg" width="100" height="100">
+</a>
+<hr>
+
+<p>외부 사이트로 연결 : 새로운 창으로 </p>
+<a href="http://www.itwillbs.co.kr" target="_blank">itwill 자세한 정보보기</a>
+<hr>
+
+<p>하이퍼링크 기능으로 특정 파일 다운로드(download): download속성 </p>
+<a href="image1/top.jpg" download>top.jpg 다운로드(클릭)</a>
+<a href="../medias/product.pdf" download>product.pdf 다운로드(클릭)</a>
+<a href="../medias/product.pdf" download="p">
+product.pdf를 다른 이름(p.pdf) 으로 다운로드(클릭)</a>
+
+
+
+</body>
+</html>

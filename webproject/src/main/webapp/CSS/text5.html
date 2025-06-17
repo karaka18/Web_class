@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 관련 스타일</title>
+
+<style>
+.a{ text-decoration: none;}
+.b{ text-decoration: line-through;}
+.c{ text-decoration: overline;}
+.d{ text-decoration: underline;}
+
+/* 하이퍼링크 (a태그)의 밑줄 없애기 */
+a{ text-decoration: none;}
+
+/* 텍스트에 그림자 만들기 : text-shadow 속성 */
+/* 형식)text-shaodw : 가로거리 세로거리 번짐정도 그림자 색상 */
+.shadow1{
+	text-shadow: 1px 1px black;
+	color:red;
+}
+
+.shadow2{
+	text-shadow: 5px 5px 3px #ffa500;
+	color:red;
+}
+
+.shadow3{
+	text-shadow: 7px -7px 20px #000;
+	color:#fff;
+}
+	
+</style>
+</head>
+<body>
+	<h3>텍스트에 선 만들기(밑줄, 취소선, 윗줄)</h3>
+	<p class="a">text-decoration : none(선없애기)</p>
+	<p class="b">text-decoration : line-through("취소선 : 중간에 선 만들기")</p>
+	<p class="c">text-decoration : overline(위쪽에 선 만들기)</p>
+	<p class="d">text-decoration : underline(오른쪽 선 만들기)</p>
+	
+	<h3>하이퍼링크(a태그)의 밑줄 없애기</h3>
+	<a href="http://www.naver.com"><p>하이퍼링크에 생기는 밑줄을 제거합니다</p></a>
+	<hr>
+	
+	<h3>텍스트에 그림자 만들기 : text-shadow 속성</h3>
+	<p>형식)text-shaodw : 가로거리 세로거리 번짐정도 그림자 색상</p>
+	
+	<h1 class="shadow1">HTML</h1>
+	<h1 class="shadow2">CSS</h1>
+	<h1 class="shadow3">JAVASCRIPT</h1>
+	
+	
+</body>
+</html>

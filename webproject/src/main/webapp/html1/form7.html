@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>지원서작성</title>
+</head>
+<body>
+
+<div id="container" style="width:600px; margin:auto;"> 
+
+<form action="#" method="get">
+<fieldset>
+           
+<h1>프런트엔드 개발자 지원서 </h1>
+<p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+<hr>
+
+	<h4>개인정보</h4>
+	<ul>
+	<li>
+		 <!-- <input>태그 앞 뒤에 <label>과 </label> 태그로 묶어도 됩니다 -->
+			<label for="sname"> 이름 </label>
+			<input type="text" name="name" id="sname" autofocus placeholder="공백없이 입력하세요">
+	</li>
+	
+	<li>
+			<label for="snumber"> 연락처 </label>
+			<input type="tel" name="tel" id="snum">
+	</li>
+		 
+	</ul>
+	
+	<h4>지원 분야</h4>
+	<ul>
+	<li>
+		<label><input type="radio" name="field" value="an"> 웹 퍼블리싱</label>
+	</li>
+	
+	<li>
+		<label><input type="radio" name="field" value="pd"> 웹 애플리케이션 개발</label>
+	</li>
+	
+	<li>
+		<label><input type="radio" name="field" value="eng"> 개발 환경 개선</label>
+	</li>
+		
+	</ul>
+	
+	
+	<h4>보유 기술 Skill</h4>
+	
+	<ul>
+	<li>	
+	<select name="skill">
+		 <option value="HTML">HTML<option>
+		 <option value="CSS">CSS<option>
+		 <option value="JAVASCRIPT">JAVASCRIPT<option>
+		 <option value="JAVA">JAVA<option>
+		 <option value="JSP">JSP<option>
+		 <option value="DATABASE">DATABASE<option>
+ 	</select>
+ 	</li>
+ 	</ul>
+	
+	
+	<h4>보유 자격증</h4>	
+	<ul>
+	<li>
+	<input type="checkbox" value="ce1" name="ce">정보처리기사
+	<input type="checkbox" value="ce2" name="ce">SQLD
+	<input type="checkbox" value="ce3" name="ce">빅데이터분석기사
+	</li>
+	</ul>	
+	
+	
+     <label>
+       <h4>지원동기</h4>
+       <textarea name="motive" cols="80" rows="5" 
+       placeholder="본사 지원 동기를 간략히 써 주세요."
+       style="resize:none"></textarea>
+     </label>
+     
+	<div>	
+		<button type="submit">접수하기</boutton>
+		<button type="reset">다시 쓰기</button>
+	</div>
+
+</fieldset>
+
+
+</form>
+</div>
+
+
+
+
+</body>
+</html>

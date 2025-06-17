@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>박스 모델(블록 요소)</title>
+<style>
+
+/*
+div, span {
+	background-color: black;
+	color:#fff;
+	width:100px;
+	height:100px;
+}
+*/
+
+div {
+
+	/* 컨텐츠 내용이 들어갈 수 있는 영역 크기 : width, height 속성 */
+	width:300px;
+	height:300px;
+
+	/* 테두리 굵기 : 1px */
+	border:1px solid black;
+	background-color: red;
+	
+	/* 안쪽 여백 : 50px */
+	padding:50px;
+	
+	/* div 너비 계산 총(402px) : width(300px) + padding(왼쪽:50px + 오른쪽:50px) + border(왼쪽:1px + 오른쪽:1px)*/
+	
+	/* 바깥 여백 : margin (왼쪽 : 20px, 오른쪽 : 20px)*/
+	margin:20px;
+/* 	display : inline-block; */
+}
+/* 박스 모델의 크기를 계산하는 box-sizing 속성 */
+.box1{
+	/* content-box : width, height의 크기는 변하지 않게 고정되어 있고, 
+	padding, border 속성값에 따라서 div 크기가 변경되는 방식으로 크기 조정 */
+	box-sizing:content-box;	/* 기본값 */
+}
+
+.box2{
+	/* border-box : width, height 에서 지정한 크기만큼 박스모델의 크기가 정해진다. */
+	/* padding, border 속성값에 변경이 일어나면 컨텐츠 영역의 크기를 늘이거나 줄여서 div 크기 조정*/
+	/* width, height의 크기 만큼 박스 모델의 크기를 지정하고 싶은 경우 사용 */
+	box-sizing:border-box;
+}
+
+.box3{
+	/* 박스 모델에 그림자 효과 지정 : box-shadow 속성*/
+	/* 형식)box-shadow : 수평거리 수직거리 흐림정도 번짐정도 색상 (안쪽그림자 : inset); */
+/* 	box-shadow : 10px 10px 5px 5px gray; */
+	box-shadow : 4px 4px gray;
+}
+
+.box4{
+	/* 안쪽 그림자 : inset */
+	box-shadow : 5px -5px orange inset;
+}
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+<h3> 블록 요소(block element)와 인라인 요소(inline element)</h3>
+<p>1. 블록요소 : 자신만의 너비와 높이를 가진다.</p>
+
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="box3">3</div>
+<div class="box4">4</div>
+
+<p>2. 인라인 요소 : 줄바꿈이 일어나지 않는 태그이다.</p>
+<p>자신만의 너비와 높이를 가질 수 없다. (입력되어 있는 내용 너비만큼만 공간을 차지할 수 있다.)</p>
+<p>다른 태그들이 자신의 바로 옆에 이어서 올 수 있기 때문에 br 태그로 줄바꿈을 해야한다.</p>
+
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 폼 만들기</title>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	body{
+		background-color: #eee;
+	}
+	
+	
+	
+	#signup{
+		background-color : #fff;
+		border:1px solid black;
+		border-radius:5px;
+		width:400px;
+		padding:20px;
+		margin:30px auto;
+	}
+	
+	#signup fieldset{
+		border: 1px solid #ccc;
+		margin: 30px;
+	}
+	
+	#signup legend{
+		font-size:0.8em;
+		font-weight:bold;
+		padding-left:5px;
+		padding-bottom:10px;
+	}
+	
+	#signup ul li{
+		list-style: none;
+		padding: 5px 10px;
+		margin-bottom:5px;
+	}
+	
+	#signup button{
+		border:1px solid black;
+		border-radius: 20px;
+		font-size: 0.8em;
+		background-color: black;
+		color: #fff;
+		
+		/* 제출 버튼을 가운데로 보내기 */
+		/* inline 요소를 block 요소로 변경 : */
+		display:block;
+		padding : 7px 25px;
+		margin: 0 auto;
+	}
+	
+	#signup label {
+		display:inline-block;
+		width:110px;
+		margin-right:20px;
+		font-size:1em;
+		font-weight:bold;
+	}
+	
+	/* 속성 선택자 */
+	input[type="text"]{
+		background-color: #eee;
+		border-radius: 5px;
+		border:none;
+		border:1px solid black;
+	}
+	
+	/* 가상 클래스 선택자 */
+	input[type="text"]:focus, input[type="password"]:focus{
+		padding:10px;
+		color:red;
+		border:1px solid #fff;
+	}
+	/* 가상 요소 선택자 : 설명, 힌트 달기 placeholder 속성에 CSS 적용 */ 
+	input[type="email"]::placeholder{
+		color:orange;
+	}
+	
+	input[type="text"],input[type="password"],
+	input[type="email"],input[type="tel"]{
+		width:200px;
+		height:20px;
+	}
+	
+	
+	
+	
+</style>
+</head>
+<body>
+	<form action="server.html" method="get" id="signup">
+	<fieldset>
+	<legend>로그인 정보</legend>
+		<ul>
+			<li>
+				<label for="userid">아이디</label>
+				<input id="userid" name="userid" type="text" required autofocus>
+			</li>
+			<li>
+				<label for="pwd1">비밀번호</label>
+				<input id="pwd1" name="pwd1" type="password" required>
+			</li>
+			<li>
+				<label for="pwd2">비밀번호 확인</label>
+				<input id="pwd2" name="pwd2" type="password" required>
+			</li>
+			<li>
+				<label for="level">회원 등급</label>
+				<input id="level" name="level" type="text" readonly value="준회원">
+			</li>
+		</ul>
+	</fieldset>
+	<fieldset>
+	<legend>개인 정보</legend>
+		<ul>
+			<li>
+				<label for="fullname">이름</label>
+				<input id="fullname" name="fullname" type="text"
+				placeholder="5자미만 공백없이">
+			</li>
+			<li>
+				<label for="email">메일 주소</label>
+				<input id="email" name="email" type="email" 
+				placeholder="abcd@domain.com" required>
+			</li>
+			<li>
+				<label for="tel">연락처</label>
+				<input id="tel" name="tel" type="tel" autocomplete="off">
+			</li>
+		</ul>
+	</fieldset>
+	<fieldset>
+		<button type="submit">제출</button>
+	</fieldset>
+	
+	
+	</form>
+</body>
+</html>

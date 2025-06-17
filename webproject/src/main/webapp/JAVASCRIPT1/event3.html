@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트(event)와 이벤트 처리기(eventListener / autoHadler)</title>
+</head>
+<body>
+	<h3>이벤트(event)와 이벤트 처리기(eventListener / autoHadler)</h3>
+	<p>DOM(Document Object Model) : 문서내의 모든 요소를
+	각각의 요소에 접근하는 방법을 제공하는 인터페이스이다.</p>
+	
+	<script>
+		document.getElementById("result");	// id명으로 행요소에 접근하는 메서드
+		document.getElementByTagName("div")[0];	//tag명으로 요소에 접근하는 메서드(배열형태 : 0번 index )
+		document.getElementByClassName("result1")[0];
+		document.querySelect("#result");
+		document.querySelect("#result");
+		
+		
+		
+	</script>
+	
+	
+	<div id="result"></div>
+	<div class="result1"></div>
+	<div class="result1"></div>
+	
+	<hr>
+	
+	
+	
+	
+	<p>2.프로퍼티(property) 방식 : 자바스크립트 코드로 웹요소를 가져온 후 속성으로 함수를 연결하는 방법이다.</p>
+	<p>웹 요소에 함수를 연결할 때 HTML 코드와 자바스크립트 코드가 섞여서 사용되지 않는다.</p>
+	<!-- 형식)<웹요소.on이벤트 = "함수명"> -->
+	
+	<button id="change">글자색바꾸기</button>
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방등에 좋은 것으로 알려져 있다.
+	</p>
+	
+	<script>
+		// 자바스크립트내에서 웹요소에 접근하고 해당하는 요소값을 변수에 저장한다.
+		// 요소값이 담긴 변수에 이벤트르 발생시키고 이벤트 처리기를 연결해서 수행한다.
+	
+		//document.getElementById("change");	
+		let changeButton = document.querySelector("#change");	//button 요소(태그)
+		
+		// 변수에 저장된 웹요소에 click이벤트를 발생시키고 이벤트처리기(실행할 함수 :changeColor)를 연결시킨다.
+		// 함수명 뒤에 () 매개변수를 붙이지 않으면 함수가 등록이 된다.
+		// 함수명 뒤에 () 매개변수를 붙이게 되면 함수 수행 결과가 등록이 된다.
+		
+		changeButton.onclick = changeColor;	// 함수명만 적기 : 함수명뒤에 ()매개변수를 붙이지 않는다.!!
+		
+		// 이벤트 처리기(실행할 함수) 만들기
+		function changeColor(){
+			//document.querySelector("p").style.color = "red";
+			
+			//** 자바스크립트로 웹요소에 CSS를 지정하는 방법 : 대상선택.style.CSS속성명 = "속성값";
+			//** CSS속성명 : 속성명 중간에 하이폰(-) 표시는 없애는 대신 뒤쪽에 오는 영문자를 대문자로 표시한다.
+			//ex) font-Weight : fontWeight 로 사용
+			
+			// 문자색 변경
+			document.querySelectorAll("p")[3].style.color = "red";
+	
+			// 문자를 두껍게
+			document.querySelectorAll("p")[3].style.fontWeight = 900;
+			
+			// 문자 가운데 맞춤
+			document.querySelectorAll("p")[3].style.textAlign = "center";
+			
+			
+		}
+		
+		
+		
+	
+	
+	</script>
+	
+	
+	
+	
+
+</body>
+</html>

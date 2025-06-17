@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트(event)와 이벤트 처리기(eventListener / autoHadler)</title>
+</head>
+<body>
+	
+	
+<!-- 	2. 프로퍼티(property)방식 -->
+<!-- 	형식)<웹요소.on이벤트 = 이벤트처리기(처리할 함수)> -->
+	
+	<button id="change">글자색바꾸기</button>
+	
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방등에 좋은 것으로 알려져 있다.
+	</p>
+	
+	<script>
+	
+	
+	//1)미리 만들어 놓은 함수를 onclick 속성에 연결하여 사용
+	
+	// 자바스크립트로 button태그에 접근해서 변수에 button태그 저장하기
+		let changeButton = document.geteElementById("change");
+
+	/*
+	//2)미리 만들어 놓은 changeColor 함수를 onclick 속성에 연결하여 사용
+		changeButton.onclick = changeColor;	//함수명만 적기 : 함수뒤에 () 매개변수를 붙이지 않는다!!
+	
+	
+	//3)이벤트 리스너(실행할 함수) 미리 작성 형식 
+	function changeColor(){
+		
+		// 자바스크립트에서 CSS기능 적용 : 웹요소명.style.속성명 = "속성값";
+		document.querySelector("p").style.color = "red";
+		document.querySelector("p").style.fontWeight = 900;
+		
+	}	
+	*/
+	
+	/*
+	//2. 익명 함수 형태로 등록해서 onclick 속성에 연결해서 사용(등록)
+	changeButton.onclick = function(){
+		
+		// 자바스크립트에서 CSS기능 적용 : 웹요소명.style.속성명 = "속성값";
+		document.querySelector("p").style.color = "green";
+		document.querySelector("p").style.fontWeight = 900;
+		
+	}
+	*/
+	
+	/*
+	//3. 익명함수 형태로 축약해서 표시하는 화살표 함수(fat arrow) 형태로 사용(등록)
+	changeButton.onclick = () => {
+		// 자바스크립트에서 CSS기능 적용 : 웹요소명.style.속성명 = "속성값";
+		document.querySelector("p").style.color = "blue";
+		document.querySelector("p").style.fontWeight = 900;
+	}
+	*/
+	
+	/*
+	//3-1.익명함수 형태로 축약해서 표시하는 화살표 함수(fat arrow) 형태로 사용(등록)
+	//{} 중괄호 내에 처리 구문이 한줄만 있는 경우 { } 중괄호를 생략할 수 있다.
+	changeButton.onclick = () => document.querySelector("p").style.color = "blue";
+	*/
+	
+	
+	
+	//4) 이벤트 핸들러에 매개변수를 전달해야 하는 경우!!
+	//-> 이벤트 핸들러로 익명함수를 등록하여 인수를 전달해야 하는 함수를 {중괄호} 내에 호출하고 매개변수값을 넣어준다!!
+	
+	//changeButton.onclick = function (str) {changeColor('orange'); };
+	
+	//익명함수를 축약해서 fat-arrow 형식으로 다시 작성
+	changeButton.onclick = (str) => changeColor('orange');
+	
+	
+	
+	//					"orange"
+	function changeColor(str){
+		
+		// 자바스크립트에서 CSS기능 적용 : 웹요소명.style.속성명 = "속성값";
+		//									  "orange"
+		document.querySelector("p").style.color = "red";
+		document.querySelector("p").style.fontWeight = 900;
+		
+	}	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	
+
+</body>
+</html>

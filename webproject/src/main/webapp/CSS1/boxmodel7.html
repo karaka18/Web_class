@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가로 메뉴 만들기(박스 모델 배치방법:display 속성)</title>
+<style>
+ul {
+/*	목록 기호 없애기 */
+	list-style: none;
+/* 	list-style-type:none; */
+}
+
+a{
+/* 	하이퍼링크 밑줄 없애기 */
+	text-decoration: none;
+	color:#fff;
+	font-weight: 900;
+	padding:15px;
+}
+
+li{
+	/* display속성 : 배치방법을 block, inline, inline-block, none 형태로배치 */
+	/* inline-block : inline처럼 배치하고 기능은 block 처럼 할 수 있다. */
+	/* none: 요소를 페이지에서 보이지 않게 지정한다 ..,,*/
+	display:inline-block;
+	border:1px solid black;
+	width:100px;
+	text-align:center;
+	padding:10px;
+	margin:10px;
+	background-color: black;
+	border-radius: 10px;
+}
+
+/* 가상 선택자 */
+/* 하이퍼링크에 마우스를 올렸을때 문자색 변경 */
+
+
+</style>
+
+</head>
+<body>
+	<h3>가로 메뉴 만들기(박스 모델 배치방법:display 속성)</h3>
+
+	<ul>
+		<li><a href="#">menu 1</a></li>
+		<li><a href="#">menu 2</a></li>
+		<li><a href="#">menu 3</a></li>
+		<li><a href="#">menu 4</a></li>
+	</ul>
+</body>
+</html>

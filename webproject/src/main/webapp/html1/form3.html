@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력 양식(form) 만들기 - 2</title>
+</head>
+<body>
+
+<form method="get" action="#">
+<h3>5) input type 속성(날짜 입력 전용) : date(년-월-일), month(년-월), week(년-몇번째주) 속성값</h3>
+
+<input type="date">
+<input type="month">
+<input type="week">
+<hr>
+
+가입기한 : 2024-12-01 ~ 2024-12-15 까지만 날짜 입력 받기<br>
+<input type="date" min="2024-12-01" max="2024-12-15">
+<hr>
+
+<h3>6) input type 속성(시간 입력 전용) : time(오전/오후 시-분), datetime-local(년-월-일 오전/오후 시-분) 속성</h3>
+<input type="time">
+<input type="datetime-local">
+
+가입기한 : 2024-12-01(00:01) ~ 2024-12-15(23:59) 까지만 날짜 입력 받기<br>
+<input type="datetime-local" min="2024-12-01T00:01" max="2024-12-15T23:59">
+
+
+</form>
+
+
+</body>
+</html>

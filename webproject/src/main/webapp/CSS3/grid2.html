@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>그리드 레이아웃</title>
+
+<style>
+#wrapper {
+	display: grid;
+	
+	grid-template-columns:repeat(3, 1fr); /* 3열 */
+	grid-template-rows:repeat(3, 100px);  /* 3행 */
+	
+	
+}
+
+
+.items {
+	border:1px solid black;
+	background-color: red;
+	color:#fff;
+	text-align: center;
+	font-weight: 900;
+	padding:15px;	
+}
+
+.box1{
+	background-color: navy;
+	/* grid-column-start:1; */ /* 시작 번호 */
+	/* grid-column-end:4;   */ /* 마지막 번호 */
+	
+	/* 열번호를 슬래시(/)를 붙여서 한꺼번에 지정 */
+	grid-column: 1/4; /* 열방향 그리드 선의 1번 위치 부터 4번 위치까지 */
+/* 	grid-column: 1/-1; */	
+}
+
+.box2{
+	background-color: green;
+	grid-row: 2/4;	/* 행방향 그리드 선의 2번 위치 부터 4번 위치까지 */
+}
+
+.box3{
+	background-color: orange;
+	grid-column: 2/4;
+
+}
+
+.box4{
+	background-color: yellow;
+	grid-column: 3/4;
+
+}
+</style>
+</head>
+
+<body>
+
+<h3>템플릿 영역을 만들어서 배치하기</h3>
+
+<div id = "wrapper">
+	<div class="items box1">1</div>
+	<div class="items box2">2</div>
+	<div class="items box3">3</div>
+	<div class="items box4">4</div>	
+</div>
+
+
+</body>
+</html>
+
+

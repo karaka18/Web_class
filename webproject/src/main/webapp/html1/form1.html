@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력양식(form) 만들기</title>
+</head>
+<body>
+
+<form method="get" action="#">
+
+<h3>1.폼 안에서 여러 구역 나누기 : 폼요소를 그룹으로 묶는 fieldset, legend 태그</h3>
+
+<fieldset>
+	<legend>상품선택</legend>
+</fieldset>
+<hr>
+
+<h3>2.요소(태그)의 항목명 지정 : label 태그</h3>
+<p>항목명을 클릭하면 연결되어 있는 입력상자로 바로 커서가 이동되도록 하는 기능</p>
+<p>label tag의 for속성값과 input태그의 id 속성값이 동일해야 한다!!!</p>
+아이디(6자이상):<input type="text"><br>
+
+<label for="id">아이디(6자이상):</label>
+<input type="text" id="id"><br>
+
+<label>아이디(6자이상):<input type="text"></label><br>
+<hr>
+
+<!-- 입력양식, 입력양식 컨트롤, 입력상자, 폼컨트롤, 요소상자 -->
+<h3>3.입력 상자(컨트롤 작성) : input 태그</h3>
+<p>1)input type 속성 : text(한줄 텍스트 입력), password(비밀번호 입력) 속성값</p>
+<p>size : 상자 크기, maxlength:입력할 수 있는 최대 문자수 , value : 기본적으로 입력되어 있는값(초기값)</p>
+
+<fieldset>
+	<legend>아이디와 비밀번호 입력</legend>
+	
+	<label>아이디 : <input type="text" name="id" id="id" size="10" maxlength="5" value="아이디입력"></label>
+	
+	<label for="pw">비밀번호 :</label> 
+	<input type="password" id="pw" name="pw">
+<!-- 	<input type="submit" value="전송"> -->
+<!-- 	<input type="reset" value="취소"> -->
+</fieldset>
+<hr>
+
+<p>2)input type 속성 : email(이메일 입력), url(url 주소 입력), search(검색단어 입력), tel(전화번호 입력) 속성값</p>
+이메일 : <input type="email" name="email"><br>
+연락처 : <input type="tel" name="tel"><br>
+url주소 : <input type="url" name="url"><br>
+검색 : <input type="search" name="search"><br>
+<hr>
+
+<p>3)input type 속성 : checkbox(여러개의 항목을 동시에 선택 가능), radio(여러개 중에서 하나만 선택 가능) 속성값</p>
+<p>checked 속성: 기본적으로 선택되어져 있는 값으로 사용해야 하는 경우 지정 </p>
+<p>***value 속성값을 꼭 지정해 놓아야 한다.(서버에서 처리할 데이터값 미리 지정해 놓음)</p>
+<fieldset>
+
+	<legend>상품선택</legend>
+	<p>주문할 상품을 선택해 주세요</p>
+	
+	<input type="checkbox" value="s_3" name="gift" checked>선물용 3kg
+	<input type="checkbox" value="s_5" name="gift" checked>선물용 5kg
+	<input type="checkbox" value="f_3" name="gift">가정용 3kg
+	<input type="checkbox" value="f_5" name="gift">가정용 5kg
+
+	<p>포장 선택</p>
+	<input type="radio" value="yes" name="present">선물 포장
+	<input type="radio" value="no" name="present" checked>선물 포장 안함
+
+</fieldset>
+<hr>
+
+</form>
+
+</body>
+</html>

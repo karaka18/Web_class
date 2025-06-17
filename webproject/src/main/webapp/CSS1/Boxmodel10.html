@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>박스 모델 배치방법(position 속성)</title>
+<style>
+	body{
+		/* 세로 스크롤바 생성 */
+		height:2000px;
+	}
+	
+	div{
+		width:200px; height:100px;
+		border:5px solid black;
+		text-align:center;
+		background-color: skyblue;
+	}
+	
+	/* 1)위치 속성 : 기준위치와 블록 요소 사이가 얼마나 떨어져 있는지 숫자로 지정 */
+	/* 1)위치 속성 : left, right, top, bottom -> 가로방향(left, right), 세로방향(top, bottom) */
+	/* 위치 속성 지정 형식) left:100px; */
+		
+	/* 2)position 속성 : static, relative, absolute, fixed로 지정해야만 위치 속성이 움직인다.!!! */
+	/* position 속성 지정 형식) position: relative; */
+	
+	#box1 {
+		/* position 속성을 지정해야만 위치 속성이 움직인다.!!! */
+		/* static : 기본값, 문서의 흐름에 맞추어서 이동() */
+		position:static;
+	
+		/* 위치 속성 지정 */
+		left:100px; top:100px;
+		background-color: red;
+	}
+	
+	#box2 {
+		/* position 속성을 지정해야만 위치 속성이 움직인다.!!! */
+		/* relative : 현재 요소(태그) 위치를 기준으로 위치 속성에서 지정한 만큼 (상대적으로) 이동  */
+		position:relative;
+	
+		/* 위치 속성 지정 */
+		left:100px; top:100px;
+		background-color: green;
+	}	
+	
+	#box3 {
+		/* position 속성을 지정해야만 위치 속성이 움직인다.!!! */
+		/* absolute : body 태그의 시작 위치(브라우저의 본문영역의 시작위치)를 기준으로 위치 속성에서 지정하 만큼 이동  */
+		position:absolute;
+	
+		/* 위치 속성 지정 */
+		right:500px; top:100px;
+		background-color: blue;
+	}
+	
+	#box4 {
+		/* position 속성을 지정해야만 위치 속성이 움직인다.!!! */
+		/* 브라우저의 창 (뷰포트)의 시작 위치를 기준으로 이동 */
+		/* fixed : 브라우저의 내용을 위/아래쪽으로 스크롤 시키면 블록 요소가 고정되어있다. */
+		position:fixed;
+	
+		/* 위치 속성 지정 */
+		left:100px; top:100px;
+		background-color: orange;
+	}
+
+
+
+
+</style>
+</head>
+<body>
+	<h3>1)위치 속성과 2)position 속성을 이용한 블록 요소 배치 방법</h3>
+	<p>1)위치 속성 : left, right, top, bottom -> 가로방향(left, right), 세로방향(top, bottom)</p>
+	<p>위치 속성 지정 형식) left:100px;</p>
+	<p>2)position 속성 : static, relative, absolute, fixed</p>
+	<p>position 속성 지정 형식) position: relative;</p>
+	<hr>
+	
+	<div id="box1">static</div>
+	<div id="box2">relative</div>
+	<div id="box3">absolute</div>
+	<div id="box4">fixed</div>
+	
+	
+	
+</body>
+</html>

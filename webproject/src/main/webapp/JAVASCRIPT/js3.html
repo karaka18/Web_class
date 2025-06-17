@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 기본 입출력</title>
+</head>
+<body>
+<h3>입력하기 : 1.확인/취소 : confirm(). 2. 데이터값 입력 : prompt(), 3.HTML 문서에 출력:document.write() </h3>
+
+<h3>1. 확인/취소 입력 : confirm() -> 확인단추 : true / 취소단추 : false 값을 변수에 저장해준다.</h3>
+<p>사용자에게 확인(true) or 취소(false) 값을 입력받아서 처리해야 하는 경우 사용한다.</p>
+
+<script>
+	// 형식) confirm("질문 메시지");
+	
+	// var reply = 10; - > 자바스크립트에서 변수에 데이터값 저장
+	var reply = confirm("정말 배경이미지를 바꾸겠습니까?");
+	console.log(reply); // 결과값이 확인단추 : true / 취소단추 : false
+	
+</script>
+<hr>
+
+<h3> 2. 데이터값 입력 : prompt() -> 키보드에서 입력받은 데이터값을 변수에 저장해준다.</h3>
+
+<script>
+	// 형식) prompt("표시할 메시지", "초기값(생략가능)");
+	
+	// 이름을 변수에 키보드로 직접 입력받아서 저장하기
+	var name = prompt("이름을 입력하세요 >>> ", "아무개");
+	alert("이름 : " + name);
+	document.write("이름 : " + name);
+</script>
+
+<h3> 키보드로 이름을 입력받아서 변수에 저장하고 HTML 문서에 출력하기 </h3>
+<script>
+	var name = prompt("이름을 입력하세요");
+	document.write("<h1>어서오세요</h1>");
+	document.write("<b><big>" + name + "</b></big>님, 환영합니다!!");
+</script>
+
+
+</body>
+</html>

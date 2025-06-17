@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>screen 객체</title>
+</head>
+<body>
+	<h3>screen 객체로 공지사항 창 중앙에 배치하기</h3>
+	<p>무너를 열면 팝업창이 표시됩니다.!!!</p>
+	
+	<script>
+		
+		//		연결할 문서이름, 창이름, 공지사항창의 너비와 높이
+		// 	open_window.html, "pop", 500,400
+		function openCenter(doc, win, w, h){
+			
+			//(UI영역을 제외한 영역의 가로너비 - 팝업창의 가로너비) / 2 = (1000 - 500) /2
+			//공지사항창의 left 위치가 정해진다.
+			let left = (screen.availWidth - w) / 2;
+			document.write(`left = ${left} `);
+			
+			let top = ( screen.availHeight - h) / 2;
+			document.write(`top = ${top} `);
+		
+			//window.open("연결할주소(파일명)", "창이름", "창옵션(창의 구성 요소)");
+			//창옵션(창의 구성 요소) : width=500, height=400, left=000, top=000
+			let opt = `width=${w}, height=${h}, left=${left}, top=${top} `;
+			document.write(`opt = ${opt}<br>`);
+			
+			window.open(doc, win, opt);
+				
+		}
+		
+		openCenter("open_window.html", "pop", 600,500);		
+	</script>
+</body>
+</html>

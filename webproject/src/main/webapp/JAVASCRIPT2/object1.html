@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 객체(Object)</title>
+</head>
+<body>
+	
+	<h3>객체(object)</h3>
+	<p>프로그램에서 인식할 수 있는 모든 대상을 가리킨다.</p>
+	<p>자바스크립트에서 객체는 데이터를 저장하고 처리하는 기본단위이다.</p>
+	<p>자바스크립트에서 필요한 시스템을 객체라고도 한다.</p>
+	<hr>
+	
+	<p>객체 생성 : 1.객체 리터럴 이용 방식, 2.Object() 객체 생성자 함수를 이용하는 방식,
+	3.(생성자)함수 이용 방식</p>
+	
+	<script>
+	// 1.객체 리터럴 이용 방식
+	// 1) 객체 생성
+	const Person = {
+			// 프로퍼티(propery : 속성) -> 변수, 메서드를 포함
+			// 형식)key : value 형식으로 구성
+			// 콤마로 구분!!
+			name:"김하나",// 변수 용도로 사용
+			age:20,		// 변수 용도로 사용
+			show:function show(){ // 함수 용도로 사용
+				document.write(`이름 : ${this.name}, 나이 : ${this.age}`);
+				
+			}
+			
+	}
+	
+	// 2) 객체 사용
+	Person.show();
+	let irum = Person.name;
+	let nai = Person.age;
+	document.write(`이름 : ${irum}, 나이 : ${nai}<br>`);
+	
+	// 3) 속성값 변경
+	Person.name = "이두나";
+	Person.age = "19";
+	Person.show();
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

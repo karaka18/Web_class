@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트(event)와 이벤트 처리기(eventListener / autoHadler)</title>
+
+<style>
+	a:link, a:visited{
+		color:black;
+		text-decoration: none;
+		font-weight:900;
+	}
+
+	ul{
+		list-style:none;
+		width:450px;
+		margin:10px auto;
+	}
+	
+	ul li{
+		display: inline-block;
+		border: 3px solid #ccc;
+		border-radius:15px 15px 0 0;
+		padding:10px 15px;
+		width:100px;
+		text-align: center;
+	}
+	
+	/* 표시 영역 */
+	#result{
+		width:500px;
+		height:300px;
+		margin:30px auto;
+		border:3px solid #ccc;
+		border-radius:15px;
+		
+	}
+	
+</style>
+
+</head>
+<body>
+	<h3>이벤트(event)와 이벤트 처리기(eventListener / autoHadler)</h3>
+	<p>1)인라인(inline)방식 : 이벤트(사건,동작)를 HTML 요소(태그)의 속성으로 직접 지정하는 방식이다.</p>
+	1) HTML 요소의 속성으로 이벤트 핸들러를 등록하는 방식이다.
+	2) HTML 코드에 자바스크립트가 추가되어서 HTML코드와 자바스크립트 코드가 섞여서 사용이 되는 방식이다.
+	<!-- 형식 <태그 on이벤트명 = "함수명"> -->
+	<hr>
+	
+	<!-- 메뉴 -->
+	<ul>
+		<li><a href="#" onclick="changeBg('green')">Green</a></li>
+		<li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+		<li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+	</ul>
+	
+	<!-- 표시영역 -->
+	<div id="result"></div>
+	
+	<script>
+	// 지정한 영역에 background-color를 변경시키는 메서드 작성
+	//					 'green'
+		function changeBg(color){
+			// document.querySelector( "선택자" ) 형식으로 요소(태그)에 접근
+			let result = document.querySelector("#result");	//div 태그 선택
+			
+			// 입력받은 매개변수에서 넘어오는 색상값으로 표시
+			//							   'green'
+			result.style.backgroundColor = color;
+		}
+	
+	
+	</script>
+	
+	
+</body>
+</html>

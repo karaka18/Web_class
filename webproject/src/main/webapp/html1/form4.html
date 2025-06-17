@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력양식(form) 만들기 - 3</title>
+</head>
+<body>
+
+<form method="get" action="#">
+<h3>7)input type 속성 :submit(전송), reset(취소), hidden(숨겨서 서버로 넘길값) 속성값</h3>
+
+<fieldset>
+	<legend>로그인</legend>
+	
+	아이디 : <input type="text" name="id"><br>
+	비밀번호 : <input type="password" name="pw"><br>
+	<input type="submit" value="전송">
+	<input type="reset" value="다시 입력">
+	<input type="hidden" value="서버에 전송해야 하는값(실제로 보이지는 않음)">
+	
+</fieldset>
+<hr>
+
+<h3>8) input type 속성 : button(submit, reset 기능이 없는 버튼 형태) </h3>
+<p>버튼 형태 : 버튼을 클릭하면 자바스크립트로 만들어 놓은 기능을 동작시키도록 하는 것이다.</p>
+
+<input type="button" value="그냥버튼">
+<input type="button" value="클릭" onclick="alert('버튼을 만들고 호출하기')"><br>
+
+<h3>**button 태그 : HTML5 에서 새로 추가된 button 기능의 태그이다.</h3>
+<p>button type="submit, reset, button" 3가지로 지정해서 용도에 따라서 사용 가능</p>
+<p>form 태그내에 button태그를 type 속성을 주지 않고 지정하면 submit 기능이 수행된다.</p>
+<button>버튼</button>
+<button type="submit">전송</button>
+<button type="reset">취소</button>
+<button type="button" onclick="alert('클릭하셨습니다!!')">클릭해보세요</button>
+<hr>
+
+<h3>9)input type 속성 : file 속성값 (파일 첨부할때 업로드 창을 삽입)</h3>
+<input type="file">
+
+
+
+
+
+
+
+
+</form>
+
+</body>
+</html>

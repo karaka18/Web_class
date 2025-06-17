@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document객체 : DOM(document)</title>
+</head>
+<body>
+	<h3>document객체 : DOM(Document Object Model)</h3>
+	<p>자바스크립트를 이용하여 웹문서의 (웹요소 (tag), 속성, text)에 접근하고 제어할 수 있도록
+	웹 문서를 체계적으로 정리해 놓은 자바스크립트 객체(인터페이스, 시스템)이다.</p>
+	
+	<script>
+		// document 객체의 프로퍼티
+		document.write(`<p>document.title = ${document.title}</p>`);
+		document.write(`<p>document.location = ${document.location}</p>`);
+		document.write(`<p>document.inputEncoding = ${document.inputEncoding}</p>`);
+		document.write(`<p>document.lastModified = ${document.lastModified}</p>`);
+		
+		function fun1(){
+			// title태그내의 내용을 변경
+			// document.title= '새로운 타이틀';
+			document.title = "타이틀변경"
+			alert(document.title);
+		}
+		//			  pink
+		function fun2(color){
+			// document.bgColor 프로퍼티로 문서의 배경색 변경
+			//					pink
+			document.bgColor = color;
+		}
+		
+		
+	</script>
+	
+	
+	<input type="button" value="타이틀 변경" onclick="fun1()">
+	
+	<h3>document backgroundcolor 색상 변경</h3>
+	<input type="radio" name="bgcolor" value="pink" onclick="fun2('pink')">pink
+	<input type="radio" name="bgcolor" value="yellow" onclick="fun2('yellow')">yellow
+	<input type="radio" name="bgcolor" value="orange" onclick="fun2('orange')">orange
+	<input type="radio" name="bgcolor" value="white" onclick="fun2('white')">white
+	
+	
+</body>
+</html>

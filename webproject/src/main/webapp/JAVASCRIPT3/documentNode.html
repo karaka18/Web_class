@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM-노드처리</title>
+</head>
+<body>
+	<h3>DOM에서 노드 추가, 삭제하기</h3>
+	1)웹문서의 처음 화면에서는 내용이 보이지 않다가 이벤트가 발생하면 내용이 나타나는 경우가 있다.
+	-> 새로운 노드가 추가되거나 삭제되는 경우이다.
+	2)노드를 추가하면 단순히 요소 노드 뿐만아니라 텍스트와 속성노드도 함께 추가해야 한다.
+	3)노드 리스트(node list) : 노드 정보를 여러개 저장한 것이다.
+	
+	<h3>텍스트 노드(textNode)를 사용하는 새로운 요소 추가하기</h3>
+	<h1>Web Programming</h1>
+	
+	<ul id="itemList">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JAVASCRIPT</li>
+	</ul>
+	<hr>
+	
+	<p>더보기 텍스트를 클릭하면 ul 요소에 새로운 li요소를 추가</p>
+	<!-- this.onclick='': 더보기를 클릭하면 addLi() 함수가 한번만 수행되도록 한다!!! -->
+	<a href="#" onclick = "addLi(); this.onclick='';">더보기</a>
+	<!-- 텍스트 노드(textNode)가 여러번 추가되지 않도록 한다!!! -->
+	
+	<script>
+		
+		function addLi(){
+			// 1)새로운 요소 노드 생성(li 요소 만들기)
+			let newItem = document.createElement('li');
+			
+			// 2)새로운 텍스트 노드 생성(li 요소내에 넣을 텍스트 노드 만들기)
+			let textNode = document.createTextNode('새로운 li 추가');
+			
+			// 3)부모 노드와 연결(li 요소와 텍스트 노드를 연결)
+			newItem.appendChild(textNode);
+			
+			// 4)부모 노드와 연결(ul 요소에 li 요소 연결)
+			document.querySelector("#itemList").appendChild(newItem);
+			
+		}
+	
+	</script>
+	
+	
+	
+</body>
+</html>

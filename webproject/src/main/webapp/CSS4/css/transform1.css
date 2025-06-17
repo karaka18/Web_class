@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+.container {
+	
+	width:1000px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	background-color: #eee;
+	border:1px solid black;
+	margin:30px;	
+}
+
+.origin {
+	width:80px;
+	height: 80px;
+	background-color: lightcoral;
+	padding:10px;
+	margin:20px 50px;	
+	/* 회전할 때 원근감 지정 */
+	perspective:100px;
+}
+
+/* 자식 선택자 */
+.origin > div {
+	width:80px;
+	height: 80px;
+	background-color: red;
+	/* 변형 과정 시간 */	
+	transition:all 3s;
+	/* 회전할 때 원근감 지정 */
+	/* perspective:100px; */
+}
+
+
+/* 이동 : translate() 함수, 이동 거리 지정 단위  : %, px, em 등 */
+/* + , - 값으로 방향으로 조정함 */
+
+.container .origin #movex:hover {	
+	transform:translateX(-50px); /* X축(가로)으로 이동 */
+} 
+
+.container .origin #movey:hover {	
+	transform:translateY(50px); /* Y축(세로)으로 이동 */
+} 
+
+.container .origin #movexy:hover {	
+	transform:translate(50px, 50px); /* XY축(가로세로)으로 이동 */
+} 
+
+
+/* 확대, 축소 : scale()함수, 단위 : 0(축소), 양수값이 커질수록 (확대) */
+/* + , - 값으로 방향으로 조정함 */
+
+.container .origin #scalex:hover {	
+	transform:scaleX(2); /* X축(가로)으로 확대 */
+} 
+
+.container .origin #scaley:hover {	
+	transform:scaleY(2); /* Y축(세로)으로 확대 */
+} 
+
+.container .origin #scalexy:hover {	
+	transform:scale(2, 0.5); /* XY축(가로세로)으로 확대 */
+} 
+
+/* 회전 : rotate() 함수, 단위 : +/- 각도(deg 키워드 붙이기) */
+/* + , - 값으로 방향으로 조정함 */
+
+.container .origin #rotatex:hover {	
+	transform:rotateX(40deg); /* X축(가로)으로 회전 */
+} 
+
+.container .origin #rotatey:hover {	
+	transform:rotateY(40deg); /* Y축(세로)으로 회전 */
+} 
+
+.container .origin #rotatexy:hover {	
+	transform:rotate(40deg); /* XY축(가로세로)으로 회전 */
+	/* 원근감(perspective:100px) 은 부모 요소에 정의해야 한다. */
+} 
+
+/* 왜곡 : skew() 함수, 단위 : +/- 각도(deg 키워드 붙이기) */
+
+.container .origin #skewx:hover {	
+	transform:skewX(40deg); /* X축(가로)으로 회전 */
+} 
+
+.container .origin #skewy:hover {	
+	transform:skewY(15deg); /* Y축(세로)으로 회전 */
+} 
+
+.container .origin #skewxy:hover {	
+	transform:skew(-25deg, -15deg); /* XY축(가로세로)으로 회전 */
+} 

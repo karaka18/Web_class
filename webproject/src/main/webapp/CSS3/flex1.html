@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 웹페이지에 접속한 사용자의 디바이스 크기를 웹브라우저가 인식할 수 있게 한다. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>플렉스 박스 레이아웃(flex)</title>
+<style>
+	*{padding:0;margin:0;}
+	
+	.box{
+		width:200px;
+		height:200px;
+		background-color: skyblue;
+		border:1px solid black;
+	}
+	
+	/* flex container : 부모 box */
+	#container{
+		background-color:#eee;
+		height:500px;
+		
+		/* 1.flex 기능을 이용해서 부모 요소내의 자식 요소(항목:item)를 배치 */
+		/* flex 컨테이너 = 속성은 대부분 부모요소에 지정 !! */
+		display:flex;
+		
+		/* 2.flex-direction 속성 : 배치 방향 지정 (주축:가로(row), 세로(column)) */
+		
+		/* 주축 배치 방향 : 가로 방향(row, row-reverse) */
+		/* flex-direction: row; */	/* 기본값 : 속성을 지정하지 않으면 기본값으로 사용한다. */
+		/* flex-direction: row-reverse; */
+		
+		/* 주축 배치 방향 : 세로방향 (column,column-recerse) */
+		/* flex-direction: column; */
+		/* flex-direction: column-reverse; */
+		
+		/* 3. 부모 요소 너비(크기)보다 많은 수의 자식 요소 항목이 있을 경우 줄바꿈 여부 */
+		/* flex-wrap 속성 : wrap, no-wrap, wrap-reverse */
+		
+		/* 기본값 : 줄바꿈이 잃어나지 않음*/
+		/* flex-wrap:no-wrap; */
+		
+		/* 줄바꿈이 일어남 */
+		/* flex-wrap:wrap; */
+		
+		/* 줄바꿈이 일어남 */
+		/* flex-wrap:wrap-reverse; */
+		
+		/* 4.배치방향과 줄바꿈 여부 속성값을 한번에 묶어서 지정 : flex-flow 속성 */
+		/* 행방향으로 배치(주축)하고 줄바꿈이 일어난다. */
+		flex-flow:row wrap;
+		
+		/* 5.주축 정렬 방법 지정 : justify-content 속성 */
+		/* justify-content: flex-start; */		/* 왼쪽 정렬 */
+		/* justify-content: flex-end; */		/* 오른쪽 정렬 */
+		/* justify-content: center; */			/* 가운데 정렬 */
+		/* justify-content: flex-between; */	/* 여백을 동일하게 맞추어서 정렬 */
+		/* justify-content: flex-around; */		/* 여백을 동일하게 맞추어서 정렬 */
+		/* justify-content: flex-evenly; */		/* 여백을 동일하게 맞추어서 정렬(여백을 모두 동일하게) */
+		
+		/* 6.교차축 정렬 방법 지정 : align-items 속성 */
+		/* align-items:flex-start; */	/* 위쪽 정렬 */
+		/* align-items:flex-end; */		/* 아래쪽 정렬 */
+		/* align-items:center; */		/* 가운데 정렬 */
+		/* align-items:baseline; */		/* 문자로 세로 기준선에 맞추어서 정렬 */
+		
+		/* strech 속성값을 사용하려면 자신의 height속성값이 지정되어 있지 않아야 한다. */
+		/* align-items:stretch; */	/* 부모 영역의 크기만큼 자식 항목의 크기를 늘려서 정렬 */
+		
+		/* 7.주축에서 줄바꿈이 생기는 경우에 세로(교차축) 정렬 : align-content 속성 */
+		/* align-content:flex-start; */
+		/* align-content:flex-end; */
+		/* align-content:center; */
+		/* align-content:space-between; */
+		/* align-content:space-around; */
+		/* align-content:stretch; */
+		
+		
+		/* 8.특정 항목(자식요소 : itme)만 정렬 : align-self 속성 */
+		/* 해당 자식 요소(항목:item)에 지정해야 한다. !!! */
+		
+	.box1{
+		align-self:center;
+	}
+	/* .box2{
+		align-self:stretch;
+	} */
+	.box3{
+		align-self:self-end;
+	}
+	.box4{
+		align-self:self-start;
+	}
+		
+		
+		
+	}
+	
+	
+	
+
+
+</style>
+
+</head>
+<body>
+	<h3>플렉스 박스 레이아웃(flex box layout)</h3>
+	
+	<div id="container">
+		<div class="box box1">1</div>
+		<div class="box box2">2</div>
+		<div class="box box3">3</div>
+		<div class="box box4">4</div>
+	</div>
+
+
+</body>
+</html>

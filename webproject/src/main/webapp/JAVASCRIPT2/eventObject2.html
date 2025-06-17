@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h3>이벤트 대상에 접근하기 - this 예약어</h3>
+	
+	<img src="image4/cup-4.jpg" id="cup">
+	
+	<script>
+		let cup = document.querySelector("#cup");
+		
+		cup.onclick = function(event){
+			alert(`이미지 파일명 : ${cup.src}`);  //자신의 객체명(변수명).src
+			alert(`이미지 파일명 : ${this.src}`); // 자신의 객체(변수)에 접근.src
+			
+			alert(`이벤트 유형 : ${event.type}, 이벤트 발생위치 : ${event.pageX}, ${event.pageY}`);
+		}
+	</script>
+	
+	<h3>이벤트 대상에 접근하기 - this 예약어(1)</h3>
+	<!--이벤트가 발생한 대상에 접근할 때 이벤트 처리기에서 예약어 this를 사용할 수 있다.
+	이벤트 처리기에서 익명함수 function(){ } 내부에 this는 이벤트가 발생한 객체(노드)를 가리킨다.
+	이벤트 처리기에서 익명함수 function(){ } 형식이 아닌 fat arrow 함수를 사용하게 되면
+	this는 window객체를 가리킨다. -> 정확하게 접근대상 객체명을 지정해주어야 한다.!!-->
+   
+	
+		
+	<img src="image4/cup-4.jpg" id="cup1">
+	
+	<script>
+		let cup1 = document.querySelector("#cup1");
+		
+		cup1.onclick = (event) => {
+			alert(`이미지 파일명 : ${cup1.src}`);  //자신의 객체명(변수명).src
+			alert(`이미지 파일명 : ${this.src}`); // 자신의 객체(변수)에 접근.src
+			
+			alert(`이벤트 유형 : ${event.type}, 이벤트 발생위치 : ${event.pageX}, ${event.pageY}`);
+		}
+	</script>
+	
+</body>
+</html>

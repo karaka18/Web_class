@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표만들기(table)</title>
+</head>
+<body>
+
+<h3>표만들기(table)</h3>
+<!-- <table> </table> : 표(테이블)의 시작과 끝 -->
+<!-- <caption> <caption> : 표(테이블)의 제목 -->
+<!-- <tr> </tr> : 행삽입(가로 방향) -->
+<!-- <td> </td> : 열(셀, 칸) 삽입 -->
+<!-- <th> </th> : 열(셀, 칸) 삽입 (열제목으로 사용 : 진하게 표시) -->
+
+<table border="1">
+
+	<caption>테이블 만들기</caption>
+
+<!-- <tr><td>1행1열</td><td>1행2열</td></tr> -->
+
+	<!--1행 -->
+	<tr>
+	<td>1행1열</td>
+	<td>1행2열</td>
+	</tr>
+	
+	<!--2행 -->
+	<tr>
+	<td>2행1열</td>
+	<td>2행2열</td>	
+	</tr>
+
+</table>
+<hr>
+
+<h1>상품구성</h1>
+
+<!-- 1.행(가로)방향으로 셀 합치기 : rowspan 속성 -->
+<!-- 형식)<td>, <th>여는 태그에 지정 : <td rowspan="2"> -->
+<!-- 2.열(세로)방향으로 셀 합치기 : colspan 속성 -->
+<!-- 형식)<td>, <th>여는 태그에 지정 : <td colspan="2"> -->
+<!-- ***합침을 당하는 셀(td, th)는 삭제해야 한다.!!! -->
+
+
+<table border="1">
+	<caption>선물용과 가정용 상품구성</caption>
+	
+<!-- 	1행 -->
+	<tr>
+	<th>용도</th>
+	<th colspan="2">중량(개수)</th>
+	<th>가격</th>	
+	</tr>
+
+<!-- 	2행 -->
+	<tr>
+	<td rowspan="2">선물용</td>
+	<td colspan="2">3kg(11~16과)</td>	
+	<td>35,000원</td>
+	</tr>
+	
+<!-- 	3행 -->	
+	<tr>
+	<td colspan="2">5kg(18~26과)</td>	
+	<td>52,000원</td>
+	</tr>
+	
+<!-- 	4행 -->	
+	<tr>
+	<td rowspan="2">가정용</td>
+	<td colspan="2">3kg(11~16과)</td>	
+	<td>30,000원</td>
+	</tr>
+	
+	
+<!-- 	5행 -->	
+	<tr>
+	<td colspan="2">5kg(18~26과)</td>	
+	<td>47,000원</td>
+	</tr>
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+</body>
+</html>

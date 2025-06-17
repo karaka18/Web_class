@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- 뷰포트 인식 메타 태그 작성 -->
+<!-- 현재 웹페이지에 접속한 디바이스가 어떤 것인지 자동으로 인식하도록 하는 태그 -->
+<!-- 형식) <meta name="viewport" content=" "> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+	h1{
+		font-size:10vx;
+		text-align:center;
+	}
+	
+	div p:nth-child(1){
+		border:10px solid #eee;
+		padding:10px; font-weight:900;
+		width:600px;
+	}
+	
+	div p:nth-child(2){
+		border:10px solid #eee;
+		padding:10px; font-weight:900;
+		max-width:600px; /* 최대 600px까지 반응(1px ~ 600px) */
+	}
+	
+	div p:nth-child(3){
+		border:10px solid #eee;
+		padding:10px; font-weight:900;
+		min-width:600px; /* 최소 600px이상 되어야 반응(600px 이상) */
+	}
+	
+	
+	
+	
+</style>
+
+
+<title>반응형 웹(responsive web)</title>
+</head>
+<body>
+<!-- 1. 반응형웹(responsive web) : 웹 요소(태그)를 디바이스(desktop, table,phone)의
+화면크기에 맞게 재배치하고 각 요소의 표시방법을 바꾸어서 웹사이트를 꾸면홍은것이다. -->
+
+<!-- 뷰포트 인식 메타 태그 작성 -->
+<!-- 형식) <meta name="viewport" content="디바이스(기기) 화면의 실제
+화면의 크기와 배율을 제어하는 방법에 대한 브라우저의 지침을 지정 -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	
+<!-- 2. 반응형 요소 단위
+vw, vh, vmin, vmax, em, rem, max-width, min-width -->
+
+	
+<h1>안녕하세요?</h1>
+
+<div>
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고 과육이 붉고 통통하다.
+	비타민 C와 비타민P가 풍부해 혈액순환, 감기예방등에 좋은 것으로 알려져 있다.</p>
+
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고 과육이 붉고 통통하다.
+	비타민 C와 비타민P가 풍부해 혈액순환, 감기예방등에 좋은 것으로 알려져 있다.</p>
+
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고 과육이 붉고 통통하다.
+	비타민 C와 비타민P가 풍부해 혈액순환, 감기예방등에 좋은 것으로 알려져 있다.</p>
+
+</div>
+
+
+
+
+	
+</body>
+</html>

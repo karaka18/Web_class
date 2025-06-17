@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math 객체</title>
+</head>
+<body>
+	<h3>Math 객체(수학 계산 관련 객체)</h3>
+	<p>random() 메서드 사용해서 난수(임의의 수) 발생시키기</p>
+	<p>범위를 지정해서 임의의 숫자 발생 : Math.random() * 5 -> 발생시킬 임의의 수 범위를 5까지로 제한
+	(정수로 0 ~ 4까지)</p>
+	<p>1 ~ 5까지 범위 지정 : Math.random() * 5 + 1 -> (정수로 1 ~ 5 까지)</p>
+	<p>정수만 표시 : Math.floor() 메서드를 사용해서 소수점 이하를 정수에 맞추어서 내림해서 표시</p>
+	
+	<script>
+		//1)random() 메서드 : 0.0 ~ 1.0 미만 사이의 임의의 숫자를 반환한다.
+		
+		document.write(`Math.random() = ${Math.random()}<br>`); // 0.0 ~ 1.0미만
+		document.write(`Math.random() = ${Math.random()}<br>`);
+		document.write(`Math.random() = ${Math.random()}<br>`);
+
+		document.write(`Math.random() * 5 = ${Math.random() * 5}<br>`); // 0 ~ 4사이의(정수)
+		document.write(`Math.random() * 5 + 1= ${Math.random() * 5 + 1}<br>`);
+		document.write(`Math.random() * 5 + 1= ${Math.random() * 5 + 1}<hr>`);
+		
+		document.write(`Math.random() * 5 + 1= ${Math.floor(Math.random() * 5 + 1)}<hr>`);
+		document.write(`Math.random() * 5 + 1= ${Math.floor(Math.random() * 5 + 1)}<hr>`);
+		document.write(`Math.random() * 5 + 1= ${Math.floor(Math.random() * 5 + 1)}<hr>`);
+	
+	</script>
+	<hr>
+	
+	<script>
+		// 로또번호 : 1 ~ 45까지 임의로 6개의 발생시키기
+		for(let i = 1; i <= 6; i++){
+			document.write(`1 ~ 45까지의 임의의 숫자 : ${Math.floor(Math.random() * 45 + 1)}<br>`);
+		}
+	</script>
+	<hr>
+	
+	<h1> 당첨자 발표 </h1>
+	
+	전체 응모자 수 : <span class="all" id="result"></span>명<br>
+	당첨자 : <span class="picked" id="result1"></span>번
+	
+	<script>
+		let seed = prompt("전체 응모자 수 : ","");
+		
+		let picked = Math.floor((Math.random() * seed) + 1);
+		
+		/*
+		document.write(`전체 응모자 수 : ${seed} 명<br>`);
+		document.write(`당첨자 : ${picked} 번<br>`);
+		*/
+		
+		// 자바스크립트에서 계산한 뎔과를 태그내에 넣기 : innerText 프로퍼티(속성) 사용!!
+		/*
+		document.querySelector("#result").innerText = seed;
+		document.querySelector("#result1").innerText = picked;
+		*/
+		
+		document.querySelector("#result").innerHTML = `<b>${seed}</b>`;
+		document.querySelector("#result1").innerHTML = `<b>${picked}</b>`;
+		
+		
+		
+	</script>
+	
+</body>
+</html>

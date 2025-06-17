@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>모달창(modal)</title>
+<style>
+	body {
+		width:100vw;
+		height:100vh;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+	}
+	#title {
+		font-size:2em;
+		margin-bottom:20px;
+		text-align: center;
+	}
+	#modal-contents {
+		background-color:#eee;
+		width:500px;
+		padding:20px;
+		border-radius:5px;
+		box-shadow:3px 3px 3px #ccc;
+	}
+	
+	#profile {
+		background-color:#d6e3f5;
+		display:flex;
+		flex-direction:row;
+		justify-content: center;
+		align-items:center;
+		padding:10px;
+	}
+	
+	#profile img {
+		width:100px;
+		height:100px;
+		margin-right:5px;
+		border-radius:5px;
+	}
+	
+	#desc {
+		width:300px;
+		display:flex;
+		flex-direction: column;
+	}
+	
+	.user {
+		background-color:#faeaea;
+		width:290px;	
+		font-weight:900;
+		margin:10px 0;
+	}
+	
+	
+	
+</style>
+</head>
+<body>
+<input type="color">
+	<div id="modal-contents">
+		<h1 id="title">My Profile</h1>
+		<div id="profile">
+			<img src="image4/kitten.jpg" alt="모달박스">
+			<div id="desc">
+				<p class="user">이름 : 모다박스</p>
+				<p class="user">주소 : 부산광역시 부산진구 동천로</p>
+				<p class="user">연락처 : 010-1234-5678</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

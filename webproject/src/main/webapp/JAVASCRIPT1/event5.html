@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트(event)와 이벤트 처리기(eventListener / autoHadler)</title>
+</head>
+<body>
+	
+	
+<!-- 	2. 프로퍼티(property)방식 -->
+<!-- 	형식)<웹요소.on이벤트 = 이벤트처리기(처리할 함수)> -->
+	
+	<button id="change">글자색바꾸기</button>
+	
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방등에 좋은 것으로 알려져 있다.
+	</p>
+	
+	<script>
+	
+	/*
+	//웹요소(tag)를 DOM을 사용해서 접근해서 변수에 저장하지 않고 미리 만들어 놓은 함수와 연결
+	//1) 자바스크립트로 DOM을 사용해서 웹요소(tag)에 접근
+	//document.getElementByTagName("Button");
+	document.querySelector("#change").onclick = changeColor;
+	
+	function changeColor(){
+		
+		//자바스크립트에서 CSS기능 적용 : 웹요소명.style.속성명 = "속성값";
+		document.querySelector("p").style.color = "red";
+		document.querySelector("p").style.fontWeight = 900;
+	}
+		
+	*/
+	
+	/*
+	//2) 익명 함수 형태로 등록(연결)
+	document.querySelector("#change").onclick = function(){
+		
+		//자바스크립트에서 CSS기능 적용 : 웹요소명.style.속성명 = "속성값";
+		document.querySelector("p").style.color = "red";
+		document.querySelector("p").style.fontWeight = 900;
+	}
+	*/
+	
+	//3)화살표 함수(fat-arrow) 형태로 등록(연결)
+	document.querySelector("#change").onclick = () => {
+		//자바스크립트에서 CSS기능 적용 : 웹요소명.style.속성명 = "속성값";
+		document.querySelector("p").style.color = "red";
+		document.querySelector("p").style.fontWeight = 900;
+		
+	}
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	
+	
+</body>
+</html>

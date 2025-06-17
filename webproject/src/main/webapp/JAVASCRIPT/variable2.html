@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수의 자료형 변환</title>
+</head>
+<body>
+<h3>변수의 자료형 변환 : 연산하는 동안 자료형의 자동 형변환이 이루어진다.</h3>
+<p>자료형 변환 함수 : Number(), parseInt(), parseFloat(), Boolean(), String()로 감싸서 변환 시킨다.</p>
+
+<script>
+//	let a = prompt("정수 입력 >> ");
+//	document.write(`a 변수 출력 = ${a}<br>`); 
+//	document.write(`a 변수 자료형 출력 = ${typeof a}<br>`);
+</script>
+
+<h3>정수 2개를 입력받아서 더한값, 뺀값, 곱한값, 나눈값을 출력하는 프로그램 작성</h3>
+<script>
+	let a1 = parseInt(prompt("정수1 입력 >> "));
+	let b1 = parseInt(prompt("정수2 입력 >> "));
+	
+	document.write(`입력받은 a1 변수 출력 = ${a1}<br>`);
+	document.write(`입력받은 b1 변수 출력 = ${b1}<br>`);	
+	document.write(`입력받은 a1 변수 출력 = ${typeof a1}<br>`);
+	document.write(`입력받은 b1 변수 출력 = ${typeof b1}<br>`);
+	document.write("----------------------<br>")
+	
+	// let c = parseInt(a1) + parseInt(b1);	-> int
+	// let c = Number(a1) + Number(b1);	-> int
+	// let c = a1 + Number(b1); -> String
+	
+	// prompt해서 입력받을때부터 정수형으로 변환
+	let c = a1+b1;	// 각 변수를 정수형으로 변환시킬 필요 없음
+	let d = a1-b1;
+	let e = a1*b1;
+	let f = a1/b1;
+	let g = a1%b1;
+
+	document.write(`더한값 c 변수 출력 = ${c}<br>`);
+	document.write(`뺀값 d 변수 출력 = ${d}<br>`);
+	document.write(`곱한값 e 변수 출력 = ${e}<br>`);
+	document.write(`나눈값 f 변수 출력 = ${f}<br>`);
+	document.write(`나머지 g 변수 출력 = ${g}<br>`);
+	
+	document.write(`더한값 c 변수 출력 = ${typeof c}<br>`);
+	document.write(`뺀값 d 변수 출력 = ${typeof d}<br>`);
+	document.write(`곱한값 e 변수 출력 = ${typeof e}<br>`);
+	document.write(`나눈값 f 변수 출력 = ${typeof f}<br>`);
+	document.write(`나머지 g 변수 출력 = ${typeof g}<br>`);
+	
+</script>
+	
+</body>
+</html>

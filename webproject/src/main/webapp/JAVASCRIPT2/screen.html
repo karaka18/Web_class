@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>screen 객체</title>
+</head>
+<body>
+	<h3>screen 객체</h3>
+	<p>웹사이트에서 접속하는 사용자의 화면 크기나 정보를 알아내는 객체이다.(운영체제의 화면이 기준)</p>
+	
+	<script>
+		document.write(`<p><b> 사용가능 높이 : ${screen.availHeight} </b></p>`);
+		document.write(`<p><b> 사용가능 너비 : ${screen.availWidth} </b></p>`);
+		document.write(`<p><b> 전체 높이 : ${screen.height} </b></p>`);
+		document.write(`<p><b> 전체 너비 : ${screen.width} </b></p>`);
+		document.write(`<p><b> 이미지 비트 깊이 : ${screen.colorDepth} </b></p>`);
+		document.write(`<p><b> 색상 해상도(픽셀당 표시할 수 있는 색상 수) : ${screen.pixelDepth} </b></p>`);
+		document.write(`<p><b> 픽셀당 표시할 수 있는 색상 수 : ${Math.pow(2,screen.pixelDepth)} </b></p>`);
+		
+		
+	
+	</script>
+
+</body>
+</html>

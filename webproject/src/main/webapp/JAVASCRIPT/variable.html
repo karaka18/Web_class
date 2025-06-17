@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 변수 선언 형식</title>
+</head>
+<body>
+
+<h3>자바스크립트의 변수 선언 형식</h3>
+<p>변수 선언 형식) 변수명 = 저장할값;</p>
+<p>변수의 자료형을 선언하지 않는다 -> 저장되는 데이터값에 따라서 동적으로 변수의 자료형이 지정된다.</p>
+<p>변수의 성격에 따라 변수명 앞에 지정할 수 있는 키워드 : var, let, const</p>
+<p>1. 변수명만 지정, 2.var 변수명, 3.let 변수명, 4.const 변수명</p>
+<hr>
+
+<script>
+	document.write("<h3>1.변수명만 지정(전역변수)형식 : 스크립트내에서 자유롭게 사용할 수 있는 변수 </h3>");
+	document.write("<h3>1.변수명만 지정(전역변수)형식 : 동일한 변수명으로 중복선언과 재할당이 가능한 변수");
+	
+	sub = "전역변수";
+	document.write("sub = "+sub+"<br>");
+	
+	// 전역변수에 데이터값을 변경
+	sub = "스크립트 내에서 자유롭게 사용할 수 있는 전역변수";
+	document.write("sub = " + sub + "<br>");
+	document.write("-------------------");
+	
+	document.write("<h3>2. var 변수명 형식 : 동일한 변수명으로 중복선언과 재할당(변경)이 가능한 변수</h3>");
+	
+	var subject = "java"; // var 키워드 형식으로 변수 선언
+	document.write("subject = "+subject+"<br>");
+	
+	var subject = "script"; // var 키워드 형식으로 변수 선언
+	document.write("subject = "+subject+"<br>");
+	
+	// 대입
+	subject = "Javascript";
+	document.write("subject = "+subject+"<br>");
+	document.write("-------------------");
+	
+	document.write("<h3>3. let 변수명 형식 : 동일한 변수명으로 중복선언은 되지 않고 재할당(변경)이 가능한 변수</h3>");
+	
+	let subject1 = "java1"; // let 키워드로 변수 선언
+	document.write("subject = "+subject1+"<br>");
+	
+	// let subject1 = "java1"; // let 키워드로 동일한 변수의 중복 변수 선언 안됨!!
+	//document.write("subject = "+subject1+"<br>");
+	
+	// 대입(변경)가능
+	subject1 = "Javascript1";
+	document.write("subject1 = " + subject1 + "<br>");
+	document.write("-----------------");
+	
+	document.write("<h3>4. const 변수명 형식 : 동일한 변수명으로 중복선언 되지 않고 재할당(변경)이 되지 않는 변수</h3>");
+	
+	const subject2 = "java2"; // const 키워드로 변수 선언
+	document.write("subject2 = "+subject2+"<br>");
+
+	// const subject2 = "java2"; // const 키워드로 동일한 변수의 중복 선언 안됨!
+	// document.write("subject2 = "+subject2+"<br>");
+	
+	// 대입(변경) 안됨!!
+	
+	subject2 = "Javascript2";
+	document.write("subject2 = "+subject2+"<br>");
+	
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM - addEventListener 이벤트 처리</title>
+</head>
+<body>
+<h3>addEventListener() 메서드를 사용해서 이미지를 변경해서 표시</h3>
+<p>mouseover 이벤트 : cup-5.jpg,<br>
+mouseout 이벤트 : cup-6.jpg,<br>
+click 이벤트 : cup-7.jpg 이미지가 표시되도록 지정</p>
+<p>형식)요소.addEventListener('이벤트종류','연결함수(이벤트리스너),이벤트전파방식(생략:false))</p>
+<br>
+
+<img src="image4/cup-4.jpg" id="cover" >
+
+<script>
+let cover = document.getElementById('cover');
+
+//익명 함수
+cover.addEventListener('mouseover',function() {
+	cover.src = 'image4/cup-5.jpg';
+});
+
+//fat-arrow(화살표 함수)
+cover.addEventListener('mouseout', () => {
+	cover.src = 'image4/cup-6.jpg';
+})
+
+//함수를 미리 작성해놓고 이벤트를 리스너로 연결 : 함수명에 () 매개변수 표시하지 말것!!!
+cover.addEventListener('click', changePic, false)
+function changePic() {
+	this.src = 'image4/cup-7.jpg';
+}
+
+
+</script>
+
+</body>
+</html>

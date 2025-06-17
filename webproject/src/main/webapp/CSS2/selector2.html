@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>고급 선택자(가상 클래스 선택자)</title>
+<style>
+ul { list-style:none; }
+
+ul li {
+	display: inline-block;
+	margin:20px;
+}
+
+ul li a {
+	text-decoration: none;
+	font-size: 1.5em;
+	font-weight: 900;
+}
+
+/* 가상 클래스 선택자 : 사용자 동작에 반응하는 선택자 */
+/* 요소의 동작이나 상태에 따라서 CSS를 지정하는 방법 */
+/* 형식)요소:동작상태 { }; */
+
+/* 1):link ->방문하지 않은 상태 동작 CSS 지정, :visited -> 방문했던 상태 동작 CSS 지정 */
+a:link, a:visited {
+	font-size: 0.5em;
+	color:black;
+}
+
+
+/* 2.:hover ->마우스 포인터를 올려놓은 상태 동작 CSS지정 */
+a:hover {
+	background-color: orange;
+	color:#fff;
+	font-size:1.5em;
+	font-weight: 900;
+	padding:20px;
+	border-radius: 10px;
+}
+
+/* 3.:focus -> 클릭을 하거나 tab키로 포커스(사용권)를 얻었을 때 상태 동작 CSS 지정 */
+a:focus {
+	background-color: yellow;
+	color:#000;
+	font-size:1.2em;
+	font-weight: 900;
+	padding:10px;
+}
+
+
+/* 4.:active -> 활성화(클릭)하고 있는 상태 동작 CSS 지정 */
+a:active {
+	background-color: red;
+	color:#fff;
+	font-weight: 900;
+	padding:15px;
+}
+
+</style>
+</head>
+<body>
+
+<h3>가상 클래스 선택자 : 사용자 동작에 반응하는 선택자</h3>
+<p>선택자에 추가하는 키워드로 선택한 요소의 특별한 상태에 대한 스타일을 지정한다.</p>
+<hr>
+
+<div class="container">
+	<nav class="navi">
+		<ul>
+			<li><a href="#">이용 안내</a></li>
+			<li><a href="#">객실 소개</a></li>
+			<li><a href="#">예약 방법 및 요금</a></li>
+			<li><a href="#">예약하기</a></li>
+		</ul>
+	</nav>
+</div>
+
+
+
+
+</body>
+</html>
